@@ -1,0 +1,59 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+extra_commands="checkconfig default_max_kernel_pages"
+extra_started_commands="reload"
+
+checkconfig() {
+	if [ ! -f /sys/kernel/mm/ksm/run ] ; then
+		ewarn "Kernel does not support KSM (Kernel Samepage Merging)"
+		eend 1
+		return 1
+	fi
+	return 0
+}
+
+default_max_kernel_pages() {
+	local total pagesize
+	total=$(awk '/^MemTotal:/ {print $2}' /proc/meminfo)
+	pagesize=$(getconf PAGESIZE)
+	echo $((total * 1024 / pagesize / 2))
+}
+
+start() {
+	checkconfig || return 1
+
+	ebegin "Enabling KSM (Kernel Samepage Merging)"
+	if [ -f /sys/kernel/mm/ksm/max_kernel_pages ]; then
+		KSM_MAX_KERNEL_PAGES=${KSM_MAX_KERNEL_PAGES:-`default_max_kernel_pages`}
+		echo $KSM_MAX_KERNEL_PAGES > /sys/kernel/mm/ksm/max_kernel_pages
+	fi
+	echo 1 > /sys/kernel/mm/ksm/run
+	eend $?
+}
+
+stop() {
+	checkconfig || return 1
+
+	ebegin "Disabling KSM (Kernel Samepage Merging)"
+	echo 0 > /sys/kernel/mm/ksm/run
+	eend $?
+}
+
+status() {
+	checkconfig || return 1
+
+	if [ "$(cat /sys/kernel/mm/ksm/run 2>/dev/null)" != "1" ]; then
+		einfo "KSM (Kernel Samepage Merging) is not active"
+		return 1
+	else
+		pages_shared="$(cat /sys/kernel/mm/ksm/pages_shared)"
+		pagesize="$(getconf PAGESIZE)"
+		bytes_shared="$(( $pages_shared * $pagesize ))"
+		einfo "KSM (Kernel Samepage Merging) is active, $bytes_shared bytes shared"
+		return 0
+	fi
+}
+

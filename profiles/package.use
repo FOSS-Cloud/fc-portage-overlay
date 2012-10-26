@@ -1,0 +1,11 @@
+sys-libs/libcap -python
+net-misc/ntp caps debug -ssl
+sys-fs/lvm2 -lvm1 -static
+net-mail/mailbase -pam
+net-analyzer/zabbix agent -sqlite3
+sys-devel/gettext -git
+dev-libs/apr-util -berkdb -gdbm
+dev-vcs/subversion -berkdb
+net-misc/dhcp ldap -ipv6
+dev-lang/php ldap
+net-nds/openldap cxx sasl syslog

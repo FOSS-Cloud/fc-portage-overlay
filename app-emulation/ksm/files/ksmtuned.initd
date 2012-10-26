@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+extra_started_commands="reload"
+
+depend() {
+	need ksm
+}
+
+PIDFILE=${PIDFILE:-/var/run/ksmtuned.pid}
+
+start() {
+	ebegin "Starting ksmtuned"
+	start-stop-daemon --start --pidfile "${PIDFILE}" /usr/sbin/ksmtuned --pidfile="${PIDFILE}"
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ksmtuned"
+	start-stop-daemon --stop --pidfile "${PIDFILE}" /usr/sbin/ksmtuned --pidfile="${PIDFILE}"
+	eend $?
+}
+
+reload() {
+	ebegin "Reload ksmtuned"
+	start-stop-daemon --signal SIGUSR1 --pidfile "${PIDFILE}" /usr/sbin/ksmtuned
+	eend $?
+}

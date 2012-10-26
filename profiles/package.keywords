@@ -1,0 +1,48 @@
+sys-apps/watchdog amd64
+
+app-emulation/spice-protocol amd64
+=sys-apps/pcsc-lite-1.8* amd64
+app-emulation/libcacard amd64
+app-emulation/spice amd64
+sys-apps/seabios amd64
+sys-apps/vgabios amd64
+<app-emulation/qemu-kvm-9999 amd64
+<app-emulation/libvirt-9999 amd64
+~media-libs/celt-0.5.1.3 amd64
+<dev-php/libvirt-php-9999 amd64
+app-emulation/ksm amd64
+
+~net-misc/dhcp-4.1.1 amd64
+sys-cluster/glusterfs amd64
+
+dev-php/pecl-uuid amd64
+dev-php/pecl-uploadprogress amd64
+
+~app-admin/ulogd-1.24 amd64
+~sys-fs/xfsprogs-3.1.5 amd64
+
+sys-cluster/rgmanager amd64
+sys-cluster/liblogthread amd64
+sys-cluster/libcman amd64
+sys-cluster/libccs amd64
+sys-cluster/libfence amd64
+sys-cluster/cman amd64
+sys-cluster/libdlm amd64
+sys-cluster/corosync amd64
+sys-fs/gfs2-utils amd64
+sys-cluster/fence-agents amd64
+sys-cluster/rgmanager-agents amd64
+net-misc/ucarp amd64
+
+dev-perl/common-sense amd64
+dev-perl/JSON-XS amd64
+dev-perl/Text-CSV-Encoded amd64
+dev-perl/Net-OpenSSH amd64
+dev-perl/Net-SSH2 amd64
+dev-perl/NetAddr-IP amd64
+dev-perl/Sys-Virt amd64
+perl-core/Switch amd64
+dev-libs/boost amd64
+dev-util/boost-build amd64
+app-admin/eselect-boost amd64
+app-emulation/fc-broker amd64

@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+depend() {
+    use net
+    after slapd libvirtd
+}
+
+start() {
+    local option_log
+
+    [ -n "${LOGLEVEL}" ] && option_log="--log ${LOGLEVEL}"
+
+    ebegin "Starting FOSS-Cloud Broker Daemon"
+    start-stop-daemon --start \
+        --user ${USER}:${GROUP} \
+        --exec /usr/sbin/fc-brokerd \
+        -- --config ${CONFIG} ${option_log} ${OPTIONS}
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping FOSS-Cloud Broker Daemon"
+    start-stop-daemon --stop \
+        --exec /usr/sbin/fc-brokerd
+    eend $?
+}

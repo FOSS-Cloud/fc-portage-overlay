@@ -1,0 +1,11 @@
+*sys-apps/pciutils
+*sys-fs/xfsprogs
+*net-misc/vconfig
+*sys-apps/iproute2
+*net-misc/ntp
+*app-forensics/chkrootkit
+*sys-fs/lvm2
+*sys-apps/dmidecode
+*sys-boot/grub-static
+*sys-kernel/linux-firmware
+-*sys-devel/gcc
