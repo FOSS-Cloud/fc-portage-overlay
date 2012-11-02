@@ -8,7 +8,6 @@
 *sys-apps/dmidecode
 *sys-boot/grub-static
 *sys-kernel/linux-firmware
--*sys-devel/gcc
 
 -*sys-devel/automake
 -*sys-devel/autoconf
