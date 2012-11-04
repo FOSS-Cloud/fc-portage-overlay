@@ -1,7 +1,7 @@
 *www-servers/apache
 *net-nds/openldap
 *net-dns/pdns-recursor
-*dev-lang/php
+*dev-lang/php:5.3
 *app-emulation/libvirt
 *app-emulation/ksm
 *net-misc/dhcpcd

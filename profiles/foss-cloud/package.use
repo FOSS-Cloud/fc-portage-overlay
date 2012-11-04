@@ -7,5 +7,5 @@ sys-devel/gettext -git
 dev-libs/apr-util -berkdb -gdbm
 dev-vcs/subversion -berkdb
 net-misc/dhcp ldap -ipv6
-dev-lang/php ldap
+dev-lang/php apache2 filter ldap mhash xml -berkdb -gdbm -ncurses -readline
 net-nds/openldap cxx sasl syslog
