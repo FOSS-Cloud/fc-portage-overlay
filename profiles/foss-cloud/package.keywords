@@ -6,7 +6,7 @@ app-emulation/libcacard amd64
 app-emulation/spice amd64
 sys-apps/seabios amd64
 sys-apps/vgabios amd64
-<app-emulation/qemu-kvm-9999 amd64
+<app-emulation/qemu-9999 amd64
 <app-emulation/libvirt-9999 amd64
 ~media-libs/celt-0.5.1.3 amd64
 <dev-php/libvirt-php-9999 amd64
