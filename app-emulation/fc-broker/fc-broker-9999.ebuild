@@ -8,7 +8,7 @@ inherit git-2
 
 DESCRIPTION="Broker Daemon for FOSS-Cloud"
 HOMEPAGE="http://www.foss-cloud.org/"
-EGIT_REPO_URI="https://github.com/FOSS-Cloud/fc-broker.git"
+EGIT_REPO_URI="https://github.com/FOSS-Cloud/broker-daemon.git"
 
 LICENSE="EUPL"
 SLOT="0"
