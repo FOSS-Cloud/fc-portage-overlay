@@ -1,0 +1,7 @@
+LINGUAS="en de fr it"
+
+QEMU_SOFTMMU_TARGETS="i386 x86_64"
+QEMU_USER_TARGETS="i386 x86_64"
+
+APACHE2_MODULES="actions alias auth_basic authn_alias authn_default authn_file authz_default authz_groupfile authz_host authz_owner authz_user autoindex dir env imagemap include info log_config logio mime mime_magic negotiation rewrite setenvif status unique_id userdir usertrack"
+

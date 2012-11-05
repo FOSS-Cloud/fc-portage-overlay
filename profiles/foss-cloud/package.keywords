@@ -6,7 +6,7 @@ app-emulation/libcacard amd64
 app-emulation/spice amd64
 sys-apps/seabios amd64
 sys-apps/vgabios amd64
-<app-emulation/qemu-kvm-9999 amd64
+<app-emulation/qemu-9999 amd64
 <app-emulation/libvirt-9999 amd64
 ~media-libs/celt-0.5.1.3 amd64
 <dev-php/libvirt-php-9999 amd64
@@ -46,3 +46,7 @@ perl-core/Switch amd64
 dev-libs/boost amd64
 dev-util/boost-build amd64
 app-emulation/fc-broker amd64
+
+# pdns-recursors-3.1* fails with newer boost (https://bugs.gentoo.org/show_bug.cgi?id=402033)
+=net-dns/pdns-recursor-3.2* amd64
+

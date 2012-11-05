@@ -1,3 +1,3 @@
 app-emulation/libvirt caps json libvirtd macvtap nfs numa nls pcap qemu sasl virt-network
-app-emulation/qemu-kvm aio -alsa curl ncurses sasl smartcard spice threads tls -vde vhost-net xattr
+app-emulation/qemu aio -alsa curl ncurses sasl smartcard spice threads tls -vde vhost-net xattr
 app-emulation/spice -client -gui sasl smartcard
