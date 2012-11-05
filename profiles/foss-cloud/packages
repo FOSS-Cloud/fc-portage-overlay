@@ -37,3 +37,9 @@
 *dev-perl/Sys-Virt
 *perl-core/Switch
 *dev-perl/XML-Simple
+
+*app-misc/fc-misc-scripts
+*net-nds/sst-ldap-schemas
+*sys-apps/fc-node-integration
+*x11-themes/fc-artwork
+*www-apps/vm-manager
