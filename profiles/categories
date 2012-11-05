@@ -3,4 +3,5 @@ dev-perl
 net-misc
 sys-cluster
 sys-kernel
+www-apps
 dev-php
