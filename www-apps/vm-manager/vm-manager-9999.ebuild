@@ -4,13 +4,14 @@
 
 EAPI=4
 
-inherit webapp git-2
+inherit git-2
 
 DESCRIPTION="FOSS-Cloud Webinterface"
 HOMEPAGE="http://www.foss-cloud.org/"
 EGIT_REPO_URI="https://github.com/FOSS-Cloud/vm-manager.git"
 
 LICENSE="EUPL"
+SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
@@ -51,22 +52,22 @@ src_configure() {
 	sed -i \
 		-e "s|\('port' =>\) [0-9]*|\1 636|" \
 		vm_config.php || die "sed failed"
-
 }
 
 src_install() {
-	webapp_src_preinst
-
 	dodoc README.md
-	rm -f .gitignore framework.zip 
+	rm -f .gitignore .git framework.zip 
 	
-	insinto "${MY_HTDOCSDIR}"
+	insinto "/var/www/localhost/vm-manager"
     doins -r .
 
-    webapp_configfile "${MY_HTDOCSDIR}/vm_config.php"
-	webapp_serverowned -R "${MY_HTDOCSDIR}/assets"
-	webapp_serverowned -R "${MY_HTDOCSDIR}/images/uploads"
-	webapp_serverowned -R "${MY_HTDOCSDIR}/protected/runtime"
-
-    webapp_src_install
+	fperms 640 "/var/www/localhost/vm-manager/vm_config.php"
+	fowners root:apache "/var/www/localhost/vm-manager/vm_config.php"
+ 
+	fperms 770 "/var/www/localhost/vm-manager/assets/"
+	fperms 770 "/var/www/localhost/vm-manager/images/uploads/"
+	fperms 770 "/var/www/localhost/vm-manager/protected/runtime/"
+	fowners root:apache "/var/www/localhost/vm-manager/assets/"
+	fowners root:apache "/var/www/localhost/vm-manager/images/uploads/"
+	fowners root:apache "/var/www/localhost/vm-manager/protected/runtime/"
 }
