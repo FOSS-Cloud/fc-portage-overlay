@@ -23,7 +23,7 @@ src_install() {
 	doexe usr/libexec/foss-cloud/*.sh
 
 	insinto /etc
-	doins -r etc/foss-cloud
+	doins -r etc/*
 
 	insinto /usr/share
 	doins -r usr/share/foss-cloud
