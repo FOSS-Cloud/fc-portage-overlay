@@ -16,19 +16,24 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND=""
-
-# TODO:
-# - write down correct dependencies
-# - move this stuff away from /usr/local
-# - write a Makefile
+RDEPEND="virtual/perl-Getopt-Long
+	virtual/perl-File-Path
+	virtual/perl-Sys-Syslog
+	dev-perl/JSON-XS
+	dev-perl/Text-CSV
+	dev-perl/TermReadKey
+	dev-perl/Net-OpenSSH
+	dev-perl/NetAddr-IP
+	dev-perl/Config-IniFiles"
 
 src_install() {
-	insinto /usr/local/etc
+	insinto /etc
 	doins -r etc/foss-cloud
 
-	exeinto /usr/local/bin
-	doexe bin/*
+	exeinto /usr/libexec/foss-cloud
+	doexe bin/node-integration-*
+
+	dosbin bin/fc-*
 
 	insinto /etc/openldap
 	doins -r data
