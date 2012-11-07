@@ -30,10 +30,9 @@
 *app-admin/localepurge
 *sys-process/lsof
 *sys-apps/less
-*dev-perl/JSON-XS
+
 *dev-perl/JSON
 *dev-perl/Text-CSV-Encoded
-*dev-perl/Net-OpenSSH
 *dev-perl/Sys-Virt
 *perl-core/Switch
 *dev-perl/XML-Simple
