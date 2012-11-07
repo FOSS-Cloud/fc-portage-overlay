@@ -16,3 +16,4 @@
 # mask newer minor.major versions of glusterfs than already installed 3.2.5
 >=sys-cluster/glusterfs-3.3.0
 dev-lang/php:5.4
+>=sys-kernel/gentoo-sources-3.3.0
