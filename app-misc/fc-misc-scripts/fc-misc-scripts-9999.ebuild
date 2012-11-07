@@ -19,12 +19,12 @@ DEPEND=""
 RDEPEND=""
 
 src_install() {
-	exeinto /usr/local/bin
-	doexe bin/*.sh
+	exeinto /usr/libexec/foss-cloud
+	doexe usr/libexec/foss-cloud/*.sh
 
-	insinto /usr/local/etc
+	insinto /etc
 	doins -r etc/foss-cloud
 
-	insinto /usr/local/lib
-	doins -r lib/foss-cloud
+	insinto /usr/share
+	doins -r usr/share/foss-cloud
 }
