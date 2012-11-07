@@ -2,6 +2,7 @@
 *sys-fs/xfsprogs
 *net-misc/vconfig
 *sys-apps/iproute2
+*net-misc/bridge-utils
 *net-misc/ntp
 *app-forensics/chkrootkit
 *sys-fs/lvm2
