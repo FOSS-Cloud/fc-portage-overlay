@@ -56,18 +56,18 @@ src_configure() {
 
 src_install() {
 	dodoc README.md
-	rm -f .gitignore .git framework.zip 
+	rm -rf .gitignore .git framework.zip 
 	
-	insinto "/var/www/localhost/vm-manager"
+	insinto "/var/www/localhost/htdocs/vm-manager"
     doins -r .
 
-	fperms 640 "/var/www/localhost/vm-manager/vm_config.php"
-	fowners root:apache "/var/www/localhost/vm-manager/vm_config.php"
+	fperms 640 "/var/www/localhost/htdocs/vm-manager/vm_config.php"
+	fowners root:apache "/var/www/localhost/htdocs/vm-manager/vm_config.php"
  
-	fperms 770 "/var/www/localhost/vm-manager/assets/"
-	fperms 770 "/var/www/localhost/vm-manager/images/uploads/"
-	fperms 770 "/var/www/localhost/vm-manager/protected/runtime/"
-	fowners root:apache "/var/www/localhost/vm-manager/assets/"
-	fowners root:apache "/var/www/localhost/vm-manager/images/uploads/"
-	fowners root:apache "/var/www/localhost/vm-manager/protected/runtime/"
+	fperms 770 "/var/www/localhost/htdocs/vm-manager/assets/"
+	fperms 770 "/var/www/localhost/htdocs/vm-manager/images/uploads/"
+	fperms 770 "/var/www/localhost/htdocs/vm-manager/protected/runtime/"
+	fowners root:apache "/var/www/localhost/htdocs/vm-manager/assets/"
+	fowners root:apache "/var/www/localhost/htdocs/vm-manager/images/uploads/"
+	fowners root:apache "/var/www/localhost/htdocs/vm-manager/protected/runtime/"
 }
