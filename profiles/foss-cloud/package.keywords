@@ -58,3 +58,7 @@ www-apps/vm-manager amd64
 dev-php/yii amd64
 
 sys-kernel/foss-cloud-bin amd64
+
+net-nds/phpldapadmin amd64
+
+

@@ -1,6 +1,7 @@
 *www-servers/apache
 *www-apache/mod_umask
 *net-nds/openldap
+*net-nds/phpldapadmin
 *net-dns/pdns-recursor
 *dev-lang/php:5.3
 *app-emulation/libvirt
