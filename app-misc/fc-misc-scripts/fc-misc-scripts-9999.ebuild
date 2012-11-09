@@ -23,7 +23,11 @@ src_install() {
 	doexe usr/libexec/foss-cloud/*.sh
 
 	insinto /etc
-	doins -r etc/*
+	doins -r etc/{foss-cloud,local.d}
+
+	doconfd etc/conf.d/glustermount
+	doinitd etc/init.d/glustermount
+	dosym glustermount /etc/init.d/glustermount.virtualization
 
 	insinto /usr/share
 	doins -r usr/share/foss-cloud
