@@ -1,6 +1,6 @@
 # mask all new versions of libvirt newer than the 0.9.10 releases
 >=app-emulation/libvirt-0.9.11
->=dev-perl/Sys-Virt-0.9.12
+>=dev-perl/Sys-Virt-0.9.11
 
 # mask all new versions of qemu except for our own 1.0-r3
 # TODO: raise the version to include qemu-kvm-1.0.1 for FOSS-Cloud 1.0.5
