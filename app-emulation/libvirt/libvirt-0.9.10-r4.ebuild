@@ -95,7 +95,7 @@ DEPEND="${RDEPEND}
 	app-text/xhtml1"
 
 pkg_setup() {
-	use python && python_set_active_version 2
+	python_set_active_version 2
 	python_pkg_setup
 }
 
