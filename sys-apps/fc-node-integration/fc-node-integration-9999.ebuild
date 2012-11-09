@@ -24,7 +24,8 @@ RDEPEND="virtual/perl-Getopt-Long
 	dev-perl/TermReadKey
 	dev-perl/Net-OpenSSH
 	dev-perl/NetAddr-IP
-	dev-perl/Config-IniFiles"
+	dev-perl/Config-IniFiles
+	net-nds/sst-ldap-utils"
 
 src_install() {
 	insinto /etc
