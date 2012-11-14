@@ -52,6 +52,7 @@ app-emulation/fc-broker amd64
 
 app-misc/fc-misc-scripts amd64
 sys-apps/fc-node-integration amd64
+sys-apps/fc-configuration amd64
 net-nds/sst-ldap-schemas amd64
 net-nds/sst-ldap-utils amd64
 x11-themes/fc-artwork amd64
