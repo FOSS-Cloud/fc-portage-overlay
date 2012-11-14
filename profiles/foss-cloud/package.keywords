@@ -50,15 +50,6 @@ app-emulation/fc-broker amd64
 # pdns-recursors-3.1* fails with newer boost (https://bugs.gentoo.org/show_bug.cgi?id=402033)
 =net-dns/pdns-recursor-3.2* amd64
 
-app-misc/fc-misc-scripts amd64
-sys-apps/fc-node-integration amd64
-sys-apps/fc-configuration amd64
-net-nds/sst-ldap-schemas amd64
-net-nds/sst-ldap-utils amd64
-x11-themes/fc-artwork amd64
-www-apps/vm-manager amd64
-dev-php/yii amd64
-
 sys-kernel/foss-cloud-bin amd64
 
 net-nds/phpldapadmin amd64
