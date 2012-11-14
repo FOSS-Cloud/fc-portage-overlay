@@ -4,15 +4,16 @@
 
 EAPI=4
 
-inherit git-2
+MY_PN="configuration-overlay"
+MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="FOSS-Cloud configuration files"
 HOMEPAGE="http://www.foss-cloud.org/"
-EGIT_REPO_URI="https://github.com/FOSS-Cloud/configuration-overlay.git"
+SRC_URI="http://github.com/FOSS-Cloud/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
@@ -32,6 +33,8 @@ RDEPEND="app-admin/logrotate
 	sys-apps/sysvinit
 	sys-libs/glibc
 	www-servers/apache"
+
+S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	doconfd conf.d/{hwclock,keymaps,net,apache2,libvirtd}
