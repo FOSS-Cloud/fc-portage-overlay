@@ -61,4 +61,7 @@ src_install() {
 
 	fperms 0640 /etc/openldap/slapd.conf
 	fowners root:ldap /etc/openldap/slapd.conf
+
+	keepdir /var/log/syslog
+	keepdir /var/virtualization
 }
