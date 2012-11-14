@@ -13,11 +13,14 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND="=app-misc/fc-misc-scripts-1.0.4
-	=net-nds/sst-ldap-schemas-1.0.4
-	=sys-apps/fc-node-integration-1.0.4
-	=x11-themes/fc-artwork-1.0.4
-	=www-apps/vm-manager-1.0.4"
+RDEPEND="~app-misc/fc-misc-scripts-1.0.4
+	~net-nds/sst-ldap-schemas-1.0.4
+	~sys-apps/fc-node-integration-1.0.4
+	~x11-themes/fc-artwork-1.0.4
+	~www-apps/vm-manager-1.0.4
+	~sys-apps/fc-configuration-1.0.4"
+
+S="${WORKDIR}"
 
 src_compile() {
 	echo "${PV}" > "foss-cloud_version"
