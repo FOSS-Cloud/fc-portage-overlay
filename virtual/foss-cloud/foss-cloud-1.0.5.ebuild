@@ -17,9 +17,10 @@ RDEPEND="~app-misc/fc-misc-scripts-1.0.4
 	~net-nds/sst-ldap-schemas-1.0.4
 	~sys-apps/fc-node-integration-1.0.4
 	~x11-themes/fc-artwork-1.0.4
-	~www-apps/vm-manager-1.0.4
+	~www-apps/vm-manager-1.0.5
 	~sys-apps/fc-configuration-1.0.4
-	~sys-kernel/foss-cloud-bin-3.2.1.2"
+	~sys-kernel/foss-cloud-bin-3.2.1.2
+	~app-emulation/fc-broker-daemon-1.0.5"
 
 S="${WORKDIR}"
 
