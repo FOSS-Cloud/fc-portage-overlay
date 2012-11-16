@@ -18,7 +18,7 @@ SRC_URI="http://packages.foss-cloud.org/distfiles/foss-cloud-kernel-${PVR}.tbz2
 
 LICENSE="GPL-2"
 SLOT="${PV}"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
