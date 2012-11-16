@@ -45,12 +45,9 @@ perl-core/Switch amd64
 
 dev-libs/boost amd64
 dev-util/boost-build amd64
-app-emulation/fc-broker amd64
 
 # pdns-recursors-3.1* fails with newer boost (https://bugs.gentoo.org/show_bug.cgi?id=402033)
 =net-dns/pdns-recursor-3.2* amd64
-
-sys-kernel/foss-cloud-bin amd64
 
 net-nds/phpldapadmin amd64
 
