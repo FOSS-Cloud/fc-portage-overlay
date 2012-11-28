@@ -1,0 +1,20 @@
+sys-cluster/glusterfs amd64
+sys-kernel/gentoo-sources amd64
+
+# required for Qemu
+sys-firmware/seabios amd64
+sys-firmware/vgabios amd64
+sys-firmware/sgabios amd64
+sys-firmware/ipxe amd64
+sys-libs/libseccomp amd64
+
+# this is a development snapshot, force keyword on live ebuilds
+app-emulation/fc-broker-daemon amd64
+app-misc/fc-misc-scripts amd64
+net-nds/sst-ldap-schemas amd64
+net-nds/sst-ldap-utils amd64
+sys-apps/fc-node-integration amd64
+sys-apps/fc-configuration amd64
+www-apps/vm-manager amd64
+x11-themes/fc-artwork amd64
+virtual/foss-cloud amd64
