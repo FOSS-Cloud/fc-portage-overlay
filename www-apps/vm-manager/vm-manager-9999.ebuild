@@ -70,4 +70,7 @@ src_install() {
 	fowners root:apache "/var/www/localhost/htdocs/vm-manager/assets/"
 	fowners root:apache "/var/www/localhost/htdocs/vm-manager/images/uploads/"
 	fowners root:apache "/var/www/localhost/htdocs/vm-manager/protected/runtime/"
+
+	echo 'CONFIG_PROTECT="/var/www/localhost/htdocs/vm-manager/vm_config.php"' > "${T}/99vm-manager"
+	doenvd "${T}/99vm-manager"
 }

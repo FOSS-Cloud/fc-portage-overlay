@@ -27,6 +27,13 @@ RDEPEND="virtual/perl-Getopt-Long
 	dev-perl/Config-IniFiles
 	net-nds/sst-ldap-utils"
 
+src_configure() {
+	sed -i \
+		-e '/^my $config_file_path/ { s|= .*;|= "/etc/foss-cloud";| }' \
+		-e '/^my $helper_scripts_path/ { s|= .*;|= "/usr/libexec/foss-cloud";| }' \
+		bin/fc-node-configuration || die "sed failed"
+}
+
 src_install() {
 	insinto /etc
 	doins -r etc/foss-cloud
