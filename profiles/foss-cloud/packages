@@ -10,21 +10,6 @@
 *sys-boot/grub-static
 *sys-kernel/linux-firmware
 
--*sys-devel/automake
--*sys-devel/autoconf
--*sys-apps/busybox
--*app-editors/nano
--*virtual/os-headers
--*sys-devel/bison
--*sys-devel/flex
--*sys-devel/gnuconfig
--*sys-devel/libtool
--*sys-devel/m4
--*sys-devel/make
--*sys-devel/patch
--*app-arch/cpio
--*net-misc/rsync
-
 *sys-process/dcron
 *app-admin/syslog-ng
 *app-admin/logrotate
