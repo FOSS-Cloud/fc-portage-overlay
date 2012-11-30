@@ -8,6 +8,8 @@ sys-firmware/sgabios amd64
 sys-firmware/ipxe amd64
 sys-libs/libseccomp amd64
 
+app-emulation/libguestfs amd64
+
 # this is a development snapshot, force keyword on live ebuilds
 app-emulation/fc-broker-daemon amd64
 app-misc/fc-misc-scripts amd64
