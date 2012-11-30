@@ -41,9 +41,6 @@ dev-perl/NetAddr-IP amd64
 dev-perl/Sys-Virt amd64
 perl-core/Switch amd64
 
-dev-libs/boost amd64
-dev-util/boost-build amd64
-
 # pdns-recursors-3.1* fails with newer boost (https://bugs.gentoo.org/show_bug.cgi?id=402033)
 =net-dns/pdns-recursor-3.2* amd64
 
