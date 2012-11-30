@@ -21,7 +21,7 @@ RDEPEND="virtual/httpd-php
 	dev-php/pecl-uuid
 	dev-php/libvirt-php
 	dev-php/pecl-uploadprogress
-	dev-php/pecl-ssh2
+	>=dev-php/pecl-ssh2-0.12
 	=dev-php/yii-1.1.5"
 
 src_configure() {
