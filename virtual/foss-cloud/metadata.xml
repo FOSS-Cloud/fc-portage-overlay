@@ -5,6 +5,7 @@
 Virtual package which pulls in everything for a FOSS-Cloud.
 </longdescription>
 <use>
+	<flag name='cifs'>Pull in <pkg>net-fs/cifs-utils</pkg> to support CIFS mounts.</flag>
 	<flag name='ipmi'>Pull in <pkg>sys-apps/ipmitool</pkg> to configure/readout IPMI BMCs</flag>
 	<flag name='zabbix'>Pull in the <pkg>net-analyzer/zabbix</pkg> monitoring client.</flag>
 </pkgmetadata>

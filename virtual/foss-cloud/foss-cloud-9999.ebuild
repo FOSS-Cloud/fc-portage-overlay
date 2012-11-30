@@ -10,24 +10,26 @@ HOMEPAGE="http://www.foss-cloud.org/"
 LICENSE="EUPL"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+ipmi +zabbix"
+IUSE="+cifs +ipmi +zabbix"
 
 DEPEND=""
-RDEPEND="ipmi? ( sys-apps/ipmitool )
+RDEPEND="cifs? ( net-fs/cifs-utils )
+	ipmi? ( sys-apps/ipmitool )
 	zabbix? ( net-analyzer/zabbix[agent] )
+	sys-block/nbd
 	=app-misc/fc-misc-scripts-9999
 	=net-nds/sst-ldap-schemas-9999
 	=sys-apps/fc-node-integration-9999
 	=x11-themes/fc-artwork-9999
 	=www-apps/vm-manager-9999
 	=sys-apps/fc-configuration-9999
-	~sys-kernel/foss-cloud-bin-3.2.1.2
+	~sys-kernel/foss-cloud-bin-3.6.8
 	=app-emulation/fc-broker-daemon-9999"
 
 S="${WORKDIR}"
 
 src_compile() {
-	version="nightly$(date +%Y%M%d)"
+	version="nightly-$(date +%Y%m%d)"
 	echo "${version}" > "foss-cloud_version"
 
 	cat > "os-release" << EOF
