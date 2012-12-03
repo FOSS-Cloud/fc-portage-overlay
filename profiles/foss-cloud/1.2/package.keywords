@@ -10,6 +10,11 @@ sys-libs/libseccomp amd64
 
 app-emulation/libguestfs amd64
 
+# required for sys-apps/fc-prov-backup-kvm
+dev-perl/Filesys-Df amd64
+virtual/perl-Switch amd64
+dev-perl/Net-SMTP-TLS amd64
+
 # if this is a development snapshot, force keyword on live ebuilds
 #app-emulation/fc-broker-daemon amd64
 #app-misc/fc-misc-scripts amd64
@@ -20,3 +25,4 @@ app-emulation/libguestfs amd64
 #www-apps/vm-manager amd64
 #x11-themes/fc-artwork amd64
 #virtual/foss-cloud amd64
+
