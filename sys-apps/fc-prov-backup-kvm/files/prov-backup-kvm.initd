@@ -1,0 +1,31 @@
+#!/sbin/runscript
+# Copyright 1999-2012 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+depend() {
+	need net
+	after slapd libvirtd
+}
+
+start() {
+	ebegin "Starting backup provisioning daemon"
+	start-stop-daemon --start \
+		--background \
+		--user ${USER:-root}:${GROUP:-root} \
+		--make-pidfile \
+		--pidfile "${PIDFILE}" \
+		--exec /usr/bin/provisioning.pl \
+		--interpreted \
+		-- ${OPTIONS} \
+			-c /etc/Provisioning/Backup/KVM.conf \
+			-g /etc/Provisioning/Global.conf
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping backup provisioning daemon"
+	start-stop-daemon --stop \
+		--pidfile "${PIDFILE}"
+	eend $?
+}

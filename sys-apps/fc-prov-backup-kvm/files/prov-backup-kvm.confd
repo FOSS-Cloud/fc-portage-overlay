@@ -1,0 +1,8 @@
+
+USER="root"
+GROUP="root"
+
+PIDFILE="/run/prov-kvm-backup.pid"
+
+# OPTIONS="..."
+
