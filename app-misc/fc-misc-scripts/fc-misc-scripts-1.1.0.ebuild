@@ -4,19 +4,19 @@
 
 EAPI=4
 
-inherit git-2
-
 DESCRIPTION="FOSS-Cloud miscellaneous scripts"
 HOMEPAGE="http://www.foss-cloud.org/"
-EGIT_REPO_URI="https://github.com/FOSS-Cloud/misc-scripts.git"
+SRC_URI="http://github.com/FOSS-Cloud/${PN#fc-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
 RDEPEND=""
+
+S="${WORKDIR}/${P#fc-}"
 
 src_install() {
 	exeinto /usr/libexec/foss-cloud
