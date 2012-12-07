@@ -25,7 +25,7 @@ RDEPEND="cifs? ( net-fs/cifs-utils )
 	~www-apps/vm-manager-1.2.0_rc1
 	~sys-apps/fc-configuration-1.2.0
 	~sys-kernel/foss-cloud-bin-3.6.8
-	~app-emulation/fc-broker-daemon-1.1.0"
+	~app-emulation/fc-broker-daemon-1.2.0_rc1"
 
 S="${WORKDIR}"
 
