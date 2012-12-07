@@ -16,7 +16,7 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND="~sys-apps/sst-provisioning-0.1.5
+RDEPEND="~sys-apps/sst-provisioning-0.2.0
 	dev-perl/Config-IniFiles
 	dev-perl/perl-ldap
 	virtual/perl-Switch
