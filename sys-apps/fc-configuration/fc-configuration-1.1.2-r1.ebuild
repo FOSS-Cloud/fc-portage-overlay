@@ -54,7 +54,7 @@ src_install() {
 	insinto /etc/libvirt/storage
 	doins libvirt/storage/*.xml
 
-	for d in portage profile.d ssh syslog-ng dhcp kernels apache2 openldap foss-cloud php powerdns vhosts ; do
+	for d in portage profile.d ssh syslog-ng dhcp kernels apache2 openldap foss-cloud php powerdns vhosts sysctl.d ; do
 		insinto "/etc/${d}"
 		doins -r "${d}"/*
 	done
