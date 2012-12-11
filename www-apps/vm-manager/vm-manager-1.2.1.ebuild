@@ -8,7 +8,7 @@ DESCRIPTION="FOSS-Cloud Webinterface"
 HOMEPAGE="http://www.foss-cloud.org/"
 SRC_URI="http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="EUPL"
+LICENSE="EUPL-1.1"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
@@ -54,14 +54,14 @@ src_configure() {
 
 src_install() {
 	dodoc README.md
-	rm -rf .gitignore .git framework.zip 
-	
+	rm -rf .gitignore .git framework.zip
+
 	insinto "/var/www/localhost/htdocs/vm-manager"
-    doins -r .
+	doins -r .
 
 	fperms 640 "/var/www/localhost/htdocs/vm-manager/vm_config.php"
 	fowners root:apache "/var/www/localhost/htdocs/vm-manager/vm_config.php"
- 
+
 	fperms 770 "/var/www/localhost/htdocs/vm-manager/assets/"
 	fperms 770 "/var/www/localhost/htdocs/vm-manager/images/uploads/"
 	fperms 770 "/var/www/localhost/htdocs/vm-manager/protected/runtime/"
