@@ -10,7 +10,7 @@ DESCRIPTION="FOSS-Cloud Backup script (a module of the stepping-stone provisioni
 HOMEPAGE="http://www.foss-cloud.org/"
 SRC_URI="http://github.com/FOSS-Cloud/${PN#fc-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="EUPL"
+LICENSE="EUPL-1.1"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
