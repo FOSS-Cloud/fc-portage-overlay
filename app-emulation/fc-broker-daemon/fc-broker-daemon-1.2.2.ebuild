@@ -10,7 +10,7 @@ DESCRIPTION="Broker Daemon for FOSS-Cloud"
 HOMEPAGE="http://www.foss-cloud.org/"
 SRC_URI="http://github.com/FOSS-Cloud/${PN#fc-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="EUPL"
+LICENSE="EUPL-1.1"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
@@ -44,7 +44,7 @@ src_install() {
 	newsbin Debug/daemonR fc-brokerd
 
 	insinto /etc/foss-cloud
-	doins config/broker.conf 
+	doins config/broker.conf
 	fowners root:fc-broker /etc/foss-cloud/broker.conf
 	fperms 0640 /etc/foss-cloud/broker.conf
 
