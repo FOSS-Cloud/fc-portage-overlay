@@ -40,6 +40,11 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/libvirt_domain_migrate_to_uri2.patch
+	for slot in $(php_get_slots); do
+		pushd "${WORKDIR}/${slot}" || die "pushd failed"
+		epatch "${FILESDIR}"/libvirt_domain_migrate_to_uri2.patch
+		popd || die "popd failed"
+	done
 }
 
 src_install() {

@@ -18,7 +18,7 @@
  	PHP_FE(libvirt_domain_get_job_info, NULL)
  	PHP_FE(libvirt_domain_xml_xpath, NULL)
  	PHP_FE(libvirt_domain_get_block_info, NULL)
-@@ -5375,6 +5376,52 @@
+@@ -5375,6 +5376,58 @@
  	RETURN_FALSE;
  }
  
@@ -41,7 +41,7 @@
 +	zval *zdomain;
 +	int retval;
 +	char *dconnuri;
-+	int donnuri_len;
++	int dconnuri_len;
 +	char *miguri;
 +	int miguri_len;
 +	char *dxml;
@@ -52,7 +52,7 @@
 +	long bandwidth;	 
 + 
 + 	dconnuri=NULL;
-+	donnuri_len=0;
++	dconnuri_len=0;
 +	miguri=NULL;
 +	miguri_len=0;
 +	dxml=NULL;
@@ -60,7 +60,13 @@
 +	dname=NULL;
 +	dname_len=0;
 +	bandwidth=0;
-+	GET_DOMAIN_FROM_ARGS("r|sslsl",&zdomain,&dconnuri,&dconnuri_len,&miguri,&miguri_len,&dxml,&dxml_len,&flags,&dname,&dname_len,&bandwidth);
++	GET_DOMAIN_FROM_ARGS("r|ssslsl",&zdomain,&dconnuri,&dconnuri_len,&miguri,&miguri_len,&dxml,&dxml_len,&flags,&dname,&dname_len,&bandwidth);
++
++	// set to NULL if empty string
++	if (dconnuri_len == 0) dconnuri=NULL;
++	if (miguri_len == 0) miguri=NULL;
++	if (dxml_len == 0) dxml=NULL;
++	if (dname_len == 0) dname=NULL;
 +
 +	retval=virDomainMigrateToURI2(domain->domain,dconnuri,miguri,dxml,flags,dname,bandwidth);
 +	DPRINTF("%s: virDomainMigrateToURI2() returned %d\n", PHPFUNC, retval);
