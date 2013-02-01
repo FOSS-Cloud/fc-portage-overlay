@@ -21,6 +21,7 @@ RDEPEND="app-admin/logrotate
 	app-admin/syslog-ng
 	app-admin/webapp-config
 	app-emulation/libvirt
+	app-portage/layman
 	dev-lang/php
 	net-dns/pdns-recursor
 	net-misc/dhcp
