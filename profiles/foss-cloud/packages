@@ -25,5 +25,6 @@
 *dev-perl/XML-Simple
 
 *dev-vcs/git
+*app-portage/layman
 *virtual/foss-cloud
 

@@ -13,3 +13,5 @@ net-nds/openldap cxx overlays sasl syslog
 # installed only in the build root to build the installer (sysresccd) image
 sys-fs/squashfs-tools xattr xz
 
+app-portage/layman git
+
