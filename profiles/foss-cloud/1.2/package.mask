@@ -1,0 +1,5 @@
+# Don't update gcc below 4.5 in this release
+>=sys-devel/gcc-4.6
+
+# Use kmod instead of module-init-tools since this is the Gentoo/upstream default
+sys-apps/module-init-tools
