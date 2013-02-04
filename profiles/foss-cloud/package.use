@@ -14,4 +14,4 @@ net-nds/openldap cxx overlays sasl syslog
 sys-fs/squashfs-tools xattr xz
 
 app-portage/layman git
-
+dev-vcs/git -gpg
