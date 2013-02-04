@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="virtual/httpd-php
-	dev-lang/php:5.3
+	dev-lang/php:5.4
 	dev-php/pecl-uuid
 	dev-php/libvirt-php
 	dev-php/pecl-uploadprogress
