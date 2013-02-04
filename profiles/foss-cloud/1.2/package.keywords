@@ -26,3 +26,5 @@ dev-perl/Net-SMTP-TLS amd64
 #x11-themes/fc-artwork amd64
 #virtual/foss-cloud amd64
 
+# required for qemu-1.3+
+~sys-apps/usbredir-0.6 amd64
