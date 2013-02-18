@@ -1,2 +1,5 @@
 # Use kmod instead of module-init-tools since this is the Gentoo/upstream default
 sys-apps/module-init-tools
+
+# Block newer versions of zabbix since we can't provision it yet
+>=net-analyzer/zabbix-2
