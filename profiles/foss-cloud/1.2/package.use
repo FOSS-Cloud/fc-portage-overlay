@@ -1,6 +1,8 @@
 app-emulation/libvirt caps json libvirtd macvtap nfs numa nls pcap qemu sasl virt-network
 app-emulation/qemu aio -alsa curl ncurses sasl smartcard spice tci threads tls usbredir -vde virtfs vhost-net xattr xfs
-app-emulation/spice -client -gui sasl smartcard
+
+# The smartcard flag here is only for the client
+app-emulation/spice -client -gui -smartcard sasl 
 
 # Required by libguestfs
 app-misc/hivex perl
