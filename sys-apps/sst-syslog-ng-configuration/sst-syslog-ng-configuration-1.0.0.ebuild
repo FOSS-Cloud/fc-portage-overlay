@@ -24,4 +24,6 @@ S="${WORKDIR}/${MY_P}"
 src_install() {
 	insinto /etc/syslog-ng
 	doins -r *
+
+	keepdir /var/log/syslog
 }
