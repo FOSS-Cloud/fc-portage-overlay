@@ -24,7 +24,7 @@ RDEPEND="cifs? ( net-fs/cifs-utils )
 	~x11-themes/fc-artwork-1.0.4
 	~www-apps/vm-manager-1.2.10
 	~sys-apps/fc-configuration-1.2.7
-	~sys-kernel/foss-cloud-bin-3.7.8
+	~sys-kernel/foss-cloud-bin-3.8.0
 	~app-emulation/fc-broker-daemon-1.2.7
 "
 
