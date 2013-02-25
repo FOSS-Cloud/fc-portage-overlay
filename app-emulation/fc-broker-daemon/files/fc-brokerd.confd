@@ -1,4 +1,3 @@
-
 USER="fc-broker"
 GROUP="fc-broker"
 
@@ -6,4 +5,4 @@ GROUP="fc-broker"
 CONFIG="/etc/foss-cloud/broker.conf"
 
 # Adjust the loglevel (ERROR = 3, WARNING = 4, INFO = 6, DEBUG = 7)
-# LOGLEVEL="7"
+LOGLEVEL="6"
