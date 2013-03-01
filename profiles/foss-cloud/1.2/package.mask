@@ -3,3 +3,6 @@ sys-apps/module-init-tools
 
 # Block newer versions of zabbix since we can't provision it yet
 >=net-analyzer/zabbix-2
+
+# Migration is broken
+>=app-emulation/qemu-1.4
