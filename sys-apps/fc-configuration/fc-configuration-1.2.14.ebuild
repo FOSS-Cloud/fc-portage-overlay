@@ -55,7 +55,7 @@ src_install() {
 	insinto /etc/libvirt/storage
 	doins libvirt/storage/*.xml
 
-	for d in layman openssl portage profile.d ssh dhcp kernels apache2 openldap foss-cloud php powerdns vhosts sysctl.d logrotate.d ; do
+	for d in layman portage profile.d ssh ssl dhcp kernels apache2 openldap foss-cloud php powerdns vhosts sysctl.d logrotate.d ; do
 		insinto "/etc/${d}"
 		doins -r "${d}"/*
 	done
@@ -75,6 +75,9 @@ src_install() {
 
 	keepdir /var/log/archive
 	keepdir /var/virtualization
+
+	# Create required directories
+	keepdir /etc/ssl/FOSS-Cloud_CA/{certs,crl,newcerts,private,requests}
 
 	# Set correct permissions for sensitive directories
 	fperms 0700 /etc/ssl/FOSS-Cloud_CA/private
