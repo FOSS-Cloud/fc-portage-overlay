@@ -20,13 +20,13 @@ RDEPEND="cifs? ( net-fs/cifs-utils )
 	>=net-misc/ucarp-1.5.2-r3
 	~app-misc/fc-misc-scripts-1.2.3
 	~net-nds/sst-ldap-schemas-1.2.5
-	~sys-apps/fc-node-integration-1.2.14
-	~sys-apps/fc-prov-backup-kvm-1.0.8
+	~sys-apps/fc-node-integration-1.2.15
+	~sys-apps/fc-prov-backup-kvm-1.0.9
 	~x11-themes/fc-artwork-1.0.4
-	~www-apps/vm-manager-1.2.14
-	~sys-apps/fc-configuration-1.2.14
+	~www-apps/vm-manager-1.2.15
+	~sys-apps/fc-configuration-1.2.15
 	~sys-kernel/foss-cloud-bin-3.8.1
-	~app-emulation/fc-broker-daemon-1.2.9
+	~app-emulation/fc-broker-daemon-1.2.10
 "
 
 S="${WORKDIR}"
