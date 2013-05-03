@@ -1,0 +1,123 @@
+From 3d04a9c91ab63f8c5d21c5d06c48fff90a6324ca Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Tiziano=20M=C3=BCller?= <tm@dev-zero.ch>
+Date: Fri, 3 May 2013 17:06:11 +0200
+Subject: [PATCH] Add wrappers for virDomainGetBlockJobInfo and
+ virDomainBlockPull.
+
+---
+ src/libvirt-php.c | 78 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/libvirt-php.h |  2 ++
+ 2 files changed, 80 insertions(+)
+
+diff --git a/src/libvirt-php.c b/src/libvirt-php.c
+index 0b8345a..8ea9c6e 100644
+--- a/src/libvirt-php.c
++++ b/src/libvirt-php.c
+@@ -115,6 +115,8 @@ static zend_function_entry libvirt_functions[] = {
+ 	PHP_FE(libvirt_domain_get_job_info, NULL)
+ 	PHP_FE(libvirt_domain_xml_xpath, NULL)
+ 	PHP_FE(libvirt_domain_get_block_info, NULL)
++	PHP_FE(libvirt_domain_get_block_job_info, NULL)
++	PHP_FE(libvirt_domain_block_pull, NULL)
+ 	PHP_FE(libvirt_domain_get_network_info, NULL)
+ 	PHP_FE(libvirt_domain_get_autostart, NULL)
+ 	PHP_FE(libvirt_domain_set_autostart, NULL)
+@@ -5236,6 +5238,82 @@ PHP_FUNCTION(libvirt_domain_get_block_info)
+ #endif
+ 
+ /*
++	Function name:	libvirt_domain_get_block_job_info
++	Since version:	0.4.9
++	Description:	Function is used to get the domain's block job information
++	Arguments:	@res [resource]: libvirt domain resource, e.g. from libvirt_domain_lookup_by_*()
++			@dev [string]: device to get block job information about
++	Returns: block job information array of device, type, bandwidth, cur, end
++*/
++#if LIBVIR_VERSION_NUMBER>=9005
++PHP_FUNCTION(libvirt_domain_get_block_job_info) {
++	php_libvirt_domain *domain=NULL;
++	zval *zdomain;
++	int retval;
++	char *dev;
++	int dev_len;
++
++	struct _virDomainBlockJobInfo info;
++
++	GET_DOMAIN_FROM_ARGS("rs",&zdomain,&dev,&dev_len);
++
++	retval=virDomainGetBlockJobInfo(domain->domain, dev, &info, 0);
++
++	if (retval == -1) {
++		set_error("Cannot get domain block job information" TSRMLS_CC);
++		RETURN_FALSE;
++	}
++
++	array_init(return_value);
++	LONGLONG_INIT
++	add_assoc_long(return_value, "type", (long)info.type);
++	LONGLONG_ASSOC(return_value, "bandwidth", info.bandwidth);
++	LONGLONG_ASSOC(return_value, "cur", info.cur);
++	LONGLONG_ASSOC(return_value, "end", info.end);
++}
++#else
++PHP_FUNCTION(libvirt_domain_get_block_job_info)
++{
++	set_error("Only libvirt 0.9.5 and higher supports getting the block job information" TSRMLS_CC);
++	RETURN_FALSE;
++}
++#endif
++
++/*
++	Function name:	libvirt_domain_block_pull
++	Since version:	0.4.9
++	Description:	Function is used populate a disk image with data from its backing image
++	Arguments:	@res [resource]: libvirt domain resource, e.g. from libvirt_domain_lookup_by_*()
++			@disk [string]: disk for which to pull data from the backing image
++			@bandwidth [int]: maximum bandwidth in MiB/s used to do the copy
++	Returns: TRUE if the operation has started, FALSE otherwise
++*/
++#if LIBVIR_VERSION_NUMBER>=9005
++PHP_FUNCTION(libvirt_domain_block_pull) {
++	php_libvirt_domain *domain=NULL;
++	zval *zdomain;
++	int retval;
++	char *disk;
++	long disk_len, flags=0, bandwidth=0;
++
++	GET_DOMAIN_FROM_ARGS("rs",&zdomain,&disk,&disk_len, &bandwidth, &flags);
++
++	retval=virDomainBlockPull(domain->domain, disk, bandwidth, flags);
++
++	if (retval == -1) {
++		set_error("Cannot perform block pull for domain" TSRMLS_CC);
++		RETURN_FALSE;
++	}
++}
++#else
++PHP_FUNCTION(libvirt_domain_block_pull)
++{
++	set_error("Only libvirt 0.9.5 and higher supports pull data from backing image" TSRMLS_CC);
++	RETURN_FALSE;
++}
++#endif
++
++/*
+ 	Function name:	libvirt_domain_xml_xpath
+ 	Since version:	0.4.1(-1)
+ 	Description:	Function is used to get the result of xPath expression that's run against the domain
+diff --git a/src/libvirt-php.h b/src/libvirt-php.h
+index bbcb3f2..6bb1b1b 100644
+--- a/src/libvirt-php.h
++++ b/src/libvirt-php.h
+@@ -334,6 +334,8 @@ PHP_FUNCTION(libvirt_domain_migrate);
+ PHP_FUNCTION(libvirt_domain_get_job_info);
+ PHP_FUNCTION(libvirt_domain_xml_xpath);
+ PHP_FUNCTION(libvirt_domain_get_block_info);
++PHP_FUNCTION(libvirt_domain_get_block_job_info);
++PHP_FUNCTION(libvirt_domain_block_pull);
+ PHP_FUNCTION(libvirt_domain_get_network_info);
+ PHP_FUNCTION(libvirt_domain_migrate_to_uri);
+ PHP_FUNCTION(libvirt_domain_migrate_to_uri2);
+-- 
+1.8.1.5
+
