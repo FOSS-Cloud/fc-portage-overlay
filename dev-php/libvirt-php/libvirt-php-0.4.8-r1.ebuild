@@ -42,7 +42,8 @@ src_prepare() {
 	for slot in $(php_get_slots); do
 		pushd "${WORKDIR}/${slot}" || die "pushd failed"
 		epatch \
-			"${FILESDIR}"/0001-Add-wrappers-for-virDomainGetBlockJobInfo-and-virDom.patch
+			"${FILESDIR}"/0001-Add-wrappers-for-virDomainGetBlockJobInfo-and-virDom.patch \
+			"${FILESDIR}"/0002-Add-optional-flags-parameter-to-domain_create.patch
 		eautoreconf
 		popd || die "popd failed"
 	done

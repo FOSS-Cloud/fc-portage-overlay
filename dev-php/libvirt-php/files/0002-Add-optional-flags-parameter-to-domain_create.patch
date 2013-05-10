@@ -1,0 +1,43 @@
+From 7ada631e6ff78e184199eae2f0749eef68e7e10b Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Tiziano=20M=C3=BCller?= <tiziano.mueller@stepping-stone.ch>
+Date: Fri, 10 May 2013 15:19:09 +0200
+Subject: [libvirt-php PATCH 2/2] Add optional flags parameter to domain_create
+
+Instead of adding another function libvirt_domain_create_with_flags
+simply add an optional argument to libvirt_domain_create which defaults
+to VIR_DOMAIN_NONE and call virDomainCreateWithFlags internally instead.
+---
+ src/libvirt-php.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/src/libvirt-php.c b/src/libvirt-php.c
+index 8ea9c6e..c005b82 100644
+--- a/src/libvirt-php.c
++++ b/src/libvirt-php.c
+@@ -4717,18 +4717,20 @@ PHP_FUNCTION(libvirt_domain_get_info)
+ 	Since version:	0.4.1(-1)
+ 	Description:	Function is used to create the domain identified by it's resource
+ 	Arguments:	@res [resource]: libvirt domain resource, e.g. from libvirt_domain_lookup_by_*()
++			@flags [int]: Optional flags to create the domain. Default: VIR_DOMAIN_NONE (0)
+ 	Returns:	result of domain creation (startup)
+ */
+ PHP_FUNCTION(libvirt_domain_create)
+ {
+ 	php_libvirt_domain *domain=NULL;
+ 	zval *zdomain;
++	long flags=0;
+ 	int retval;
+ 
+-	GET_DOMAIN_FROM_ARGS("r",&zdomain);
++	GET_DOMAIN_FROM_ARGS("r|l",&zdomain,&flags);
+ 
+-	retval=virDomainCreate(domain->domain);
+-	DPRINTF("%s: virDomainCreate(%p) returned %d\n", PHPFUNC, domain->domain, retval);
++	retval=virDomainCreateWithFlags(domain->domain, flags);
++	DPRINTF("%s: virDomainCreateWithFlags(%p, %d) returned %d\n", PHPFUNC, domain->domain, flags, retval);
+ 	if (retval != 0) RETURN_FALSE;
+ 	RETURN_TRUE;
+ }
+-- 
+1.8.2.1
+
