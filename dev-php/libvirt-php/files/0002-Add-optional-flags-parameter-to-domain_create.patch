@@ -1,4 +1,4 @@
-From 43bf144abd36a176fcf67bbb1f85cb46cedbd991 Mon Sep 17 00:00:00 2001
+From 51dc890ec10767cd7f873d0549328be79c5204bd Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Tiziano=20M=C3=BCller?= <tiziano.mueller@stepping-stone.ch>
 Date: Fri, 10 May 2013 15:19:09 +0200
 Subject: [libvirt-php PATCH 2/2] Add optional flags parameter to domain_create
@@ -11,7 +11,7 @@ to VIR_DOMAIN_NONE and call virDomainCreateWithFlags internally instead.
  1 file changed, 5 insertions(+), 3 deletions(-)
 
 diff --git a/src/libvirt-php.c b/src/libvirt-php.c
-index 231e582..c29a485 100644
+index 834eff8..c57b107 100644
 --- a/src/libvirt-php.c
 +++ b/src/libvirt-php.c
 @@ -4717,18 +4717,20 @@ PHP_FUNCTION(libvirt_domain_get_info)
@@ -34,7 +34,7 @@ index 231e582..c29a485 100644
 -	retval=virDomainCreate(domain->domain);
 -	DPRINTF("%s: virDomainCreate(%p) returned %d\n", PHPFUNC, domain->domain, retval);
 +	retval=virDomainCreateWithFlags(domain->domain, flags);
-+	DPRINTF("%s: virDomainCreateWithFlags(%p, %d) returned %d\n", PHPFUNC, domain->domain, flags, retval);
++	DPRINTF("%s: virDomainCreateWithFlags(%p, %ld) returned %d\n", PHPFUNC, domain->domain, flags, retval);
  	if (retval != 0) RETURN_FALSE;
  	RETURN_TRUE;
  }

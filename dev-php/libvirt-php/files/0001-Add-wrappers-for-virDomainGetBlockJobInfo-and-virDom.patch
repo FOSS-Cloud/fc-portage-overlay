@@ -1,4 +1,4 @@
-From 58188e8cf68f0b95149b0061ccee783cc8c322b9 Mon Sep 17 00:00:00 2001
+From b37eaa670b52d0b249f6e46bad8cdd07960804de Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Tiziano=20M=C3=BCller?= <tm@dev-zero.ch>
 Date: Fri, 3 May 2013 17:06:11 +0200
 Subject: [libvirt-php PATCH 1/2] Add wrappers for virDomainGetBlockJobInfo and
@@ -10,7 +10,7 @@ Subject: [libvirt-php PATCH 1/2] Add wrappers for virDomainGetBlockJobInfo and
  2 files changed, 84 insertions(+), 1 deletion(-)
 
 diff --git a/src/libvirt-php.c b/src/libvirt-php.c
-index 0b8345a..231e582 100644
+index 0b8345a..834eff8 100644
 --- a/src/libvirt-php.c
 +++ b/src/libvirt-php.c
 @@ -115,6 +115,8 @@ static zend_function_entry libvirt_functions[] = {
@@ -96,7 +96,7 @@ index 0b8345a..231e582 100644
 +	char *disk;
 +	long disk_len, flags=0, bandwidth=0;
 +
-+	GET_DOMAIN_FROM_ARGS("rs",&zdomain,&disk,&disk_len, &bandwidth, &flags);
++	GET_DOMAIN_FROM_ARGS("rs|ll",&zdomain,&disk,&disk_len, &bandwidth, &flags);
 +
 +	retval=virDomainBlockPull(domain->domain, disk, bandwidth, flags);
 +
