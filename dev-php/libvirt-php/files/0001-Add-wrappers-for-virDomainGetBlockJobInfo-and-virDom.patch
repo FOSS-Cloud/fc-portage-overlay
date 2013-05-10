@@ -1,16 +1,16 @@
-From 3d04a9c91ab63f8c5d21c5d06c48fff90a6324ca Mon Sep 17 00:00:00 2001
+From 58188e8cf68f0b95149b0061ccee783cc8c322b9 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Tiziano=20M=C3=BCller?= <tm@dev-zero.ch>
 Date: Fri, 3 May 2013 17:06:11 +0200
-Subject: [PATCH] Add wrappers for virDomainGetBlockJobInfo and
+Subject: [libvirt-php PATCH 1/2] Add wrappers for virDomainGetBlockJobInfo and
  virDomainBlockPull.
 
 ---
- src/libvirt-php.c | 78 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ src/libvirt-php.c | 83 ++++++++++++++++++++++++++++++++++++++++++++++++++++++-
  src/libvirt-php.h |  2 ++
- 2 files changed, 80 insertions(+)
+ 2 files changed, 84 insertions(+), 1 deletion(-)
 
 diff --git a/src/libvirt-php.c b/src/libvirt-php.c
-index 0b8345a..8ea9c6e 100644
+index 0b8345a..231e582 100644
 --- a/src/libvirt-php.c
 +++ b/src/libvirt-php.c
 @@ -115,6 +115,8 @@ static zend_function_entry libvirt_functions[] = {
@@ -22,7 +22,16 @@ index 0b8345a..8ea9c6e 100644
  	PHP_FE(libvirt_domain_get_network_info, NULL)
  	PHP_FE(libvirt_domain_get_autostart, NULL)
  	PHP_FE(libvirt_domain_set_autostart, NULL)
-@@ -5236,6 +5238,82 @@ PHP_FUNCTION(libvirt_domain_get_block_info)
+@@ -125,7 +127,7 @@ static zend_function_entry libvirt_functions[] = {
+ 	PHP_FE(libvirt_domain_get_screen_dimensions, NULL)
+ 	PHP_FE(libvirt_domain_send_keys, NULL)
+ 	PHP_FE(libvirt_domain_send_pointer_event, NULL)
+-        PHP_FE(libvirt_domain_update_device, NULL)
++	PHP_FE(libvirt_domain_update_device, NULL)
+ 	/* Domain snapshot functions */
+ 	PHP_FE(libvirt_domain_has_current_snapshot, NULL)
+ 	PHP_FE(libvirt_domain_snapshot_create, NULL)
+@@ -5236,6 +5238,85 @@ PHP_FUNCTION(libvirt_domain_get_block_info)
  #endif
  
  /*
@@ -31,7 +40,8 @@ index 0b8345a..8ea9c6e 100644
 +	Description:	Function is used to get the domain's block job information
 +	Arguments:	@res [resource]: libvirt domain resource, e.g. from libvirt_domain_lookup_by_*()
 +			@dev [string]: device to get block job information about
-+	Returns: block job information array of device, type, bandwidth, cur, end
++	Returns: TRUE when nothing found, FALSE in case of failure,
++			block job information array of device, type, bandwidth, cur, end otherwise
 +*/
 +#if LIBVIR_VERSION_NUMBER>=9005
 +PHP_FUNCTION(libvirt_domain_get_block_job_info) {
@@ -50,6 +60,8 @@ index 0b8345a..8ea9c6e 100644
 +	if (retval == -1) {
 +		set_error("Cannot get domain block job information" TSRMLS_CC);
 +		RETURN_FALSE;
++	} else if (retval == 0) {
++		RETURN_TRUE;
 +	}
 +
 +	array_init(return_value);
@@ -119,5 +131,5 @@ index bbcb3f2..6bb1b1b 100644
  PHP_FUNCTION(libvirt_domain_migrate_to_uri);
  PHP_FUNCTION(libvirt_domain_migrate_to_uri2);
 -- 
-1.8.1.5
+1.8.2.1
 
