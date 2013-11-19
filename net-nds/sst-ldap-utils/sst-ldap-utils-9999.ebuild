@@ -1,14 +1,18 @@
-# Copyright 1999-2012 stepping stone GmbH, Switzerland
-# Distributed under the terms of the GNU General Public License v2
+#
+# Copyright (C) 2013 FOSS-Group
+#                    Germany
+#                    http://www.foss-group.de
+#                    support@foss-group.de
+#
 # $Header: $
 
 EAPI=4
 
 inherit git-2
 
-DESCRIPTION="stepping stone GmbH LDAP utilities"
-HOMEPAGE="http://www.stepping-stone.ch/"
-EGIT_REPO_URI="https://github.com/stepping-stone/ldap-utils.git"
+DESCRIPTION="FOSS-Group LDAP utilities"
+HOMEPAGE="http://www.foss-group.ch.ch/"
+EGIT_REPO_URI="https://github.com/foss-cloud/ldap-utils.git"
 
 LICENSE="EUPL"
 SLOT="0"
