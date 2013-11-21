@@ -30,4 +30,4 @@ dev-perl/Net-SMTP-TLS amd64
 ~sys-apps/usbredir-0.6 amd64
 
 # 1.8 is the stable/old branch for Zabbix, we want latest
-=net-analyzer/zabbix-1.8* amd64
+# =net-analyzer/zabbix-1.8* amd64
