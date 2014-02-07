@@ -6,4 +6,4 @@ sys-apps/module-init-tools
 
 # Migration is broken
 # >=app-emulation/qemu-1.4
->=sys-kernel/gentoo-sources-3.12.0
+>=sys-kernel/gentoo-sources-3.10.9
