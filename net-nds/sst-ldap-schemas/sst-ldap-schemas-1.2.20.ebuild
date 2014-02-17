@@ -1,27 +1,22 @@
-#
-# Copyright (C) 2013 FOSS-Group
-#                    Germany
-#                    http://www.foss-group.de
-#                    support@foss-group.de
-#
-# Authors:
+# Copyright 1999-2013 stepping stone GmbH, Switzerland
+# Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
 EAPI=4
 
-inherit git-2
+DESCRIPTION="FOSS-Cloud LDAP schemas"
+HOMEPAGE="http://www.FOSS-Group.ch/"
+SRC_URI="http://github.com/FOSS-Cloud/${PN#sst-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-DESCRIPTION="FOSS-Group LDAP schemas"
-HOMEPAGE="http://www.foss-group.ch/"
-EGIT_REPO_URI="https://github.com/foss-cloud/ldap.git"
-
-LICENSE="EUPL"
+LICENSE="EUPL-1.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
 RDEPEND="net-nds/openldap"
+
+S="${WORKDIR}/${P#sst-}"
 
 src_install() {
 	insinto /etc/openldap/schema/
