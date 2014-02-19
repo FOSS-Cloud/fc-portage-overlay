@@ -9,6 +9,8 @@ dev-vcs/subversion -berkdb
 net-misc/dhcp ldap -ipv6
 dev-lang/php apache2 filter ldap mhash xml -berkdb -gdbm -ncurses -readline
 net-nds/openldap cxx overlays sasl syslog
+sys-libs/talloc-2.0.8 python
+app-admin/eselect-php-0.7.1 apache2
 
 # installed only in the build root to build the installer (sysresccd) image
 sys-fs/squashfs-tools xattr xz
