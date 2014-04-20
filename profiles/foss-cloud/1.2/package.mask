@@ -3,3 +3,4 @@ sys-apps/module-init-tools
 
 >=sys-apps/portage-2.1.11.63
 >=sys-kernel/gentoo-sources-3.11.11
+>=sys-apps/portage-2.1.12.3
