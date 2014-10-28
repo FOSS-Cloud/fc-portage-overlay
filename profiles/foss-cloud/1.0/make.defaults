@@ -1,5 +1,0 @@
-USE="acl acpi bash-completion bzip2 md5sum mmx sse sse2 unicode vim-syntax -cracklib -doc -gpm -ipv6 -logrotate -python -qt -tcpd -X"
-
-# This is the default if not set. Currently a reminder that
-# we should change this to "production" sometime.
-PHP_INI_VERSION="development"
