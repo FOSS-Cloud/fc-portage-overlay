@@ -20,7 +20,7 @@ RDEPEND="cifs? ( net-fs/cifs-utils )
 	>=net-misc/ucarp-1.5.2-r3
 	~app-misc/fc-misc-scripts-1.2.3
 	~net-nds/sst-ldap-schemas-1.3.0.5
-	~sys-apps/fc-node-integration-1.3.0.4
+	~sys-apps/fc-node-integration-1.3.0.5
 	~sys-apps/fc-prov-backup-kvm-1.0.11
 	~x11-themes/fc-artwork-1.0.4
 	~www-apps/vm-manager-1.3.0.5
