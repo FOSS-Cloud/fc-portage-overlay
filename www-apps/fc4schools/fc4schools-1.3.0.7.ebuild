@@ -6,7 +6,11 @@ EAPI=4
 
 DESCRIPTION="FOSS-Cloud for schools"
 HOMEPAGE="http://www.foss-cloud.org/"
-SRC_URI="http://github.com/FOSS-Cloud/${PN#fc-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://packages.foss-cloud.org/foss-cloud/pre-releases/1.3/packages/www-apps/fc4schools-${PVR}.tbz2 "
+
+#http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+
+# SRC_URI="http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
@@ -14,8 +18,7 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=virtual/foss-cloud-1.3.0
-	>=net-nds/sst-ldap-utils-1.0.5"
+RDEPEND=">=net-nds/sst-ldap-utils-1.0.5"
 
 #S="${WORKDIR}/${P#fc-}"
 
