@@ -4,9 +4,9 @@
 
 EAPI=4
 
-DESCRIPTION="stepping stone GmbH LDAP utilities"
-HOMEPAGE="http://www.stepping-stone.ch/"
-SRC_URI="http://github.com/stepping-stone/${PN#sst-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+DESCRIPTION="FOSS-Group LDAP utilities"
+HOMEPAGE="http://www.FOSS-Group.de/"
+SRC_URI="http://github.com/foss-cloud/${PN#sst-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
