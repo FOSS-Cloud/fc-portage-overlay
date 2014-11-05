@@ -6,7 +6,7 @@ EAPI=4
 
 DESCRIPTION="FOSS-Group LDAP utilities"
 HOMEPAGE="http://www.FOSS-Group.de/"
-SRC_URI="http://github.com/foss-cloud/${PN#sst-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://github.com/foss-cloud/${PN#fc-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
