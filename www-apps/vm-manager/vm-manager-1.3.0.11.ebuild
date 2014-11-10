@@ -6,7 +6,7 @@ EAPI=4
 
 DESCRIPTION="FOSS-Cloud Webinterface"
 HOMEPAGE="http://www.foss-cloud.org/"
-SRC_URI="http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="${FOSS_CLOUD_DOWNLOAD_URI}${FOSS_CLOUD_TYP}${FOSS_CLOUD_MAIN_RELEASE}${FOSS_CLOUD_DISTFILES}${PN}-${PVR}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
