@@ -30,7 +30,7 @@ EAPI=4
 
 DESCRIPTION="FOSS-Cloud LDAP schemas"
 HOMEPAGE="http://www.FOSS-Group.ch/"
-SRC_URI="http://github.com/FOSS-Cloud/${PN#fc-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL-1.1"
 SLOT="0"
@@ -40,7 +40,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="net-nds/openldap"
 
-S="${WORKDIR}/${P#sst-}"
+S="${WORKDIR}/${P}"
 
 src_install() {
 	insinto /etc/openldap/schema/

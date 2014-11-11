@@ -6,7 +6,7 @@ EAPI=4
 
 DESCRIPTION="FOSS-Group LDAP utilities"
 HOMEPAGE="http://www.FOSS-Group.de/"
-SRC_URI="http://github.com/foss-cloud/${PN#fc-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://github.com/foss-cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="net-nds/openldap"
 
-S="${WORKDIR}/${P#sst-}"
+S="${WORKDIR}/${P}"
 
 src_configure() {
 	sed -i \
