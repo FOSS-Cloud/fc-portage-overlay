@@ -4,14 +4,19 @@
 
 EAPI=4
 
+MY_PN="fc-node-integration"
+MY_P="${MY_PN}-${PV}"
+
+
 DESCRIPTION="FOSS-Cloud node integration scripts"
 HOMEPAGE="http://www.foss-cloud.org/"
-SRC_URI="http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://github.com/FOSS-Cloud/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
+
 
 DEPEND=""
 RDEPEND="virtual/perl-Getopt-Long
@@ -26,7 +31,7 @@ RDEPEND="virtual/perl-Getopt-Long
 	dev-perl/Crypt-GeneratePassword
 	>=net-nds/fc-ldap-utils-1.0.5"
 
-S="${WORKDIR}/${P#fc-}"
+S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	sed -i \
