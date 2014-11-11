@@ -6,7 +6,7 @@ EAPI=4
 
 DESCRIPTION="FOSS-Cloud node integration scripts"
 HOMEPAGE="http://www.foss-cloud.org/"
-SRC_URI="http://github.com/FOSS-Cloud/${PN#fc-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
@@ -24,7 +24,7 @@ RDEPEND="virtual/perl-Getopt-Long
 	dev-perl/NetAddr-IP
 	dev-perl/Config-IniFiles
 	dev-perl/Crypt-GeneratePassword
-	>=net-nds/sst-ldap-utils-1.0.5"
+	>=net-nds/fc-ldap-utils-1.0.5"
 
 S="${WORKDIR}/${P#fc-}"
 

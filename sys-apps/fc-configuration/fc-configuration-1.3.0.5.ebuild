@@ -4,7 +4,7 @@
 
 EAPI=4
 
-MY_PN="configuration-overlay"
+MY_PN="fc-configuration-overlay"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="FOSS-Cloud configuration files"
@@ -17,7 +17,7 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=sys-apps/sst-syslog-ng-configuration-1.0.2
+RDEPEND=">=sys-apps/fc-syslog-ng-configuration-1.0.2
 	app-admin/logrotate
 	app-admin/webapp-config
 	app-emulation/libvirt
