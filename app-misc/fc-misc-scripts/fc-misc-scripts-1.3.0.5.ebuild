@@ -6,7 +6,7 @@ EAPI=4
 
 DESCRIPTION="FOSS-Cloud miscellaneous scripts"
 HOMEPAGE="http://www.foss-cloud.org/"
-SRC_URI="http://github.com/FOSS-Cloud/${PN#fc-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-S="${WORKDIR}/${P#fc-}"
+S="${WORKDIR}/${P}"
 
 src_install() {
 	exeinto /usr/libexec/foss-cloud
