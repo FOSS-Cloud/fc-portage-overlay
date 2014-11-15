@@ -17,13 +17,15 @@ IUSE=""
 DEPEND=""
 RDEPEND=">=net-nds/sst-ldap-utils-1.0.5"
 
-#S="${WORKDIR}/${P#fc-}"
+src_configure() {
+    rm /var/www/localhost/htdocs/vm-manager/protected/config/modules_config.php
+}
 
 src_install() {
 	insinto /var/www/localhost/htdocs/vm-manager/
 	doins -r vm-manager/protected/
 
-	insinto /etc/dhcp
+	insinto /usr/sbin/
 	doins -r system/usr/sbin 
 
 	dodoc README.md
