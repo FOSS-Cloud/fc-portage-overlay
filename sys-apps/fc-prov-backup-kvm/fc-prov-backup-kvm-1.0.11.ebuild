@@ -8,7 +8,7 @@ inherit eutils perl-module
 
 DESCRIPTION="FOSS-Cloud Backup script (a module of the stepping-stone provisioning daemon)."
 HOMEPAGE="http://www.foss-cloud.org/"
-SRC_URI="http://github.com/FOSS-Cloud/${PN#fc-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL-1.1"
 SLOT="0"
@@ -25,7 +25,6 @@ RDEPEND="~sys-apps/sst-provisioning-0.2.4
 	dev-perl/Filesys-Df
 	virtual/perl-File-Path"
 
-S="${WORKDIR}/${P#fc-}"
 
 src_install() {
 	insinto ${VENDOR_LIB}

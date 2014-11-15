@@ -6,12 +6,9 @@ EAPI=4
 
 inherit eutils
 
-MY_PN="fc-broker-daemon"
-MY_P="${MY_PN}-${PV}"
-
 DESCRIPTION="Broker Daemon for FOSS-Cloud"
 HOMEPAGE="http://www.foss-cloud.org/"
-SRC_URI="http://github.com/FOSS-Cloud/${PN#fc-}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL-1.1"
 SLOT="0"
@@ -23,7 +20,6 @@ DEPEND="dev-libs/boost
 	net-nds/openldap[cxx]"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	enewgroup fc-broker

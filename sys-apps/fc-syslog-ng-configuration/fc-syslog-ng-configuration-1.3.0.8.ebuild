@@ -4,12 +4,10 @@
 
 EAPI=4
 
-MY_PN="syslog-ng"
-MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="FOSS-Group syslog-ng configuration"
 HOMEPAGE="http://www.foss-cloud.de/"
-SRC_URI="http://github.com/foss-cloud/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://github.com/foss-cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
@@ -19,7 +17,6 @@ IUSE=""
 DEPEND=""
 RDEPEND="app-admin/syslog-ng"
 
-S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	insinto /etc/syslog-ng

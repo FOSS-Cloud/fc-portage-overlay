@@ -2,13 +2,13 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
+
 
 DESCRIPTION="FOSS-Cloud Webinterface"
 HOMEPAGE="http://www.foss-cloud.org/"
-#SRC_URI="${FOSS_CLOUD_DOWNLOAD_URI}${FOSS_CLOUD_TYP}${FOSS_CLOUD_MAIN_RELEASE}${FOSS_CLOUD_DISTFILES}${PN}${FOSS_CLOUD_ARCHIVE}${PVR}.tar.gz -> ${P}.tar.gz"
-SRC_URI="http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz"
 
+SRC_URI="https://packages.foss-cloud.org/foss-cloud/pre-releases/1.3/distfiles/${P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
