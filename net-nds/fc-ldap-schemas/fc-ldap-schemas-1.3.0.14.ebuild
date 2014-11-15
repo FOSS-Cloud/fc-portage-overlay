@@ -30,7 +30,7 @@ EAPI=4
 
 DESCRIPTION="FOSS-Cloud LDAP schemas"
 HOMEPAGE="http://www.FOSS-Group.ch/"
-SRC_URI="http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://packages.foss-cloud.org/foss-cloud/${FC_TYPE}/${FC_BUILD}/distfiles/${PN}-${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL-1.1"
 SLOT="0"
