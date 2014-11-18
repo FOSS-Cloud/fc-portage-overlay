@@ -4,6 +4,9 @@
 
 EAPI=4
 
+FC_BUILD_TYP=$(cat /etc/foss-cloud/fc-build-typ)
+FC_BUILD_VERSION=$(cat /etc/foss-cloud/fc-build-version)
+
 MY_PN="fc-configuration-overlay"
 MY_P="${MY_PN}-${PV}"
 

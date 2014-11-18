@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Broker Daemon for FOSS-Cloud"
 HOMEPAGE="http://www.foss-cloud.org/"
-SRC_URI="http://github.com/FOSS-Cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://packages.foss-cloud.org/foss-cloud/${FC_BUILD_TYP}/${FC_BUILD_VERSION}/distfiles/${PN}-${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL-1.1"
 SLOT="0"

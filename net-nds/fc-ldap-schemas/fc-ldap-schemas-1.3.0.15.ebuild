@@ -28,6 +28,9 @@
 
 EAPI=4
 
+FC_BUILD_TYP=$(cat /etc/foss-cloud/fc-build-typ)
+FC_BUILD_VERSION=$(cat /etc/foss-cloud/fc-build-version)
+
 DESCRIPTION="FOSS-Cloud LDAP schemas"
 HOMEPAGE="http://www.FOSS-Group.ch/"
 SRC_URI="https://packages.foss-cloud.org/foss-cloud/${FOSS_CLOUD_TYP}/${FOSS_CLOUD_BUILD}/distfiles/${PN}-${PV}.tar.gz -> ${P}.tar.gz"

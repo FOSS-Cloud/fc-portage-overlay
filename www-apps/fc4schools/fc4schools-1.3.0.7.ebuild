@@ -4,6 +4,9 @@
 
 EAPI=4
 
+FC_BUILD_TYP=$(cat /etc/foss-cloud/fc-build-typ)
+FC_BUILD_VERSION=$(cat /etc/foss-cloud/fc-build-version)
+
 DESCRIPTION="FOSS-Cloud for schools"
 HOMEPAGE="http://www.foss-cloud.org/"
 SRC_URI="https://packages.foss-cloud.org/foss-cloud/pre-releases/1.3/distfiles/${PN}-${PV}.tar.gz -> ${P}.tar.gz"

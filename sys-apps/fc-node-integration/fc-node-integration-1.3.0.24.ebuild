@@ -4,6 +4,8 @@
 
 EAPI=5
 
+FC_BUILD_TYP=$(cat /etc/foss-cloud/fc-build-typ)
+FC_BUILD_VERSION=$(cat /etc/foss-cloud/fc-build-version)
 
 DESCRIPTION="FOSS-Cloud node integration scripts"
 HOMEPAGE="http://www.foss-cloud.org/"
