@@ -6,7 +6,7 @@ EAPI=4
 
 PHP_EXT_NAME="libvirt-php"
 PHP_EXT_SKIP_PHPIZE="yes"
-USE_PHP="php5-3 php5-4"
+USE_PHP="php5-6 php5-5 php5-4"
 
 inherit php-ext-source-r2 eutils
 
