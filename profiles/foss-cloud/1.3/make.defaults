@@ -4,4 +4,4 @@ USE="acl acpi bash-completion bzip2 md5sum mmx sse sse2 unicode vim-syntax -crac
 # we should change this to "production" sometime.
 PHP_INI_VERSION="development"
 
-PHP_TARGETS="php5-4"
+PHP_TARGETS="php5-5"
