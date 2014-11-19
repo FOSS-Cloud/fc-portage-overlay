@@ -21,7 +21,7 @@
 *dev-perl/JSON
 *dev-perl/Text-CSV-Encoded
 *dev-perl/Sys-Virt
-*perl-core/Switch
+# *perl-core/Switch
 *dev-perl/XML-Simple
 
 *dev-vcs/git
