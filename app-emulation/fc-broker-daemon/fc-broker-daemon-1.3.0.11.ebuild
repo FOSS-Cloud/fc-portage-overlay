@@ -18,6 +18,8 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
+S="${WORKDIR}/${P}"
+
 DEPEND="dev-libs/boost
 	app-emulation/libvirt
 	net-nds/openldap[cxx]"
