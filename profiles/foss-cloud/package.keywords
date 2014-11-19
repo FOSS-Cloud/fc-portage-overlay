@@ -39,7 +39,7 @@ dev-perl/Net-OpenSSH amd64
 dev-perl/Net-SSH2 amd64
 dev-perl/NetAddr-IP amd64
 dev-perl/Sys-Virt amd64
-perl-core/Switch amd64
+# perl-core/Switch amd64
 dev-perl/Crypt-GeneratePassword amd64
 
 # pdns-recursors-3.1* fails with newer boost (https://bugs.gentoo.org/show_bug.cgi?id=402033)
