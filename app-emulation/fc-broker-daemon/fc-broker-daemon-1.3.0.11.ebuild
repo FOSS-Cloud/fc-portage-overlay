@@ -4,6 +4,9 @@
 
 EAPI=4
 
+FC_BUILD_TYP=$(cat /etc/foss-cloud/fc-build-typ)
+FC_BUILD_VERSION=$(cat /etc/foss-cloud/fc-build-version)
+
 inherit eutils
 
 DESCRIPTION="Broker Daemon for FOSS-Cloud"
