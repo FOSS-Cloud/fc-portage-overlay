@@ -9,4 +9,4 @@ app-misc/hivex perl
 
 net-fs/cifs-utils ads creds upcall
 =sys-libs/talloc-2.0.8 python
-=app-admin/eselect-php-0.7.1 apache2
+#=app-admin/eselect-php-0.7.1 apache2
