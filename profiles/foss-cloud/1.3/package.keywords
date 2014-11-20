@@ -18,10 +18,10 @@ dev-perl/Net-SMTP-TLS amd64
 # if this is a development snapshot, force keyword on live ebuilds
 #app-emulation/fc-broker-daemon amd64
 #app-misc/fc-misc-scripts amd64
-#net-nds/sst-ldap-schemas amd64
-#net-nds/sst-ldap-utils amd64
+#net-nds/fc-ldap-schemas amd64
+#net-nds/fc-ldap-utils amd64
 #sys-apps/fc-node-integration amd64
-#sys-apps/fc-configuration amd64
+#sys-apps/fc-configuration-overlay amd64
 #www-apps/vm-manager amd64
 #x11-themes/fc-artwork amd64
 #virtual/foss-cloud amd64
