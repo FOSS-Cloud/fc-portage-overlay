@@ -6,4 +6,5 @@ sys-apps/module-init-tools
 >=sys-apps/portage-2.1.12.3
 
 =dev-lang/perl-5.12*
+=dev-lang/perl-5.16*
 =dev-lang/perl-5.18*
