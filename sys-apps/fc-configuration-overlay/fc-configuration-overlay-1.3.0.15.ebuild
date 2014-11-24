@@ -12,7 +12,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="FOSS-Cloud configuration files"
 HOMEPAGE="http://www.foss-cloud.org/"
-SRC_URI="https://packages.foss-cloud.org/foss-cloud/"${FC_BUILD_TYP}"/"${FC_BUILD_VERSION}"/distfiles/${PN}-${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://packages.foss-cloud.org/foss-cloud/${FC_BUILD_TYP}/${FC_BUILD_VERSION}/distfiles/${PN}-${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
