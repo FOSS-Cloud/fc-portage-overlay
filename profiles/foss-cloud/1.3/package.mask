@@ -1,6 +1,9 @@
 # Use kmod instead of module-init-tools since this is the Gentoo/upstream default
 sys-apps/module-init-tools
 
+>=app-editors/vim-core-7.3.763
+>=app-editors/vim-7.3.763
+
 >=sys-apps/portage-2.1.11.63
 >=sys-kernel/gentoo-sources-3.17.1
 >=sys-apps/portage-2.1.12.3
