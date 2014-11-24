@@ -9,4 +9,11 @@ app-misc/hivex perl
 
 net-fs/cifs-utils ads creds upcall
 =sys-libs/talloc-2.0.8 python
-#=app-admin/eselect-php-0.7.1 apache2
+
+
+# required by dev-lang/php-5.5.16
+# required by sys-apps/fc-configuration-overlay-1.3.0.14::foss-cloud
+# required by virtual/foss-cloud-1.3.0.33::foss-cloud
+# required by @system
+# required by @world (argument)
+>=app-admin/eselect-php-0.7.1-r3 apache2
