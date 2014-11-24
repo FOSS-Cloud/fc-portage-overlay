@@ -9,7 +9,7 @@ FC_BUILD_VERSION=$(cat /etc/foss-cloud/fc-build-version)
 
 DESCRIPTION="FOSS-Group syslog-ng configuration"
 HOMEPAGE="http://www.foss-cloud.de/"
-SRC_URI="http://github.com/foss-cloud/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://packages.foss-cloud.org/foss-cloud/${FC_BUILD_TYP}/${FC_BUILD_VERSION}/distfiles/${PN}-${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
