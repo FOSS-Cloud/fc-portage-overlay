@@ -21,14 +21,14 @@ RDEPEND="cifs? ( net-fs/cifs-utils )
 	~app-misc/fc-misc-scripts-1.3.0.6
     ~net-nds/fc-ldap-schemas-1.3.0.16
 	~net-nds/fc-ldap-utils-1.3.0.9
-	~sys-apps/fc-node-integration-1.3.0.27
+	~sys-apps/fc-node-integration-1.3.0.28
 	~sys-apps/fc-prov-backup-kvm-1.0.11
 	~x11-themes/fc-artwork-1.0.4
-	~www-apps/vm-manager-1.3.0.22
+	~www-apps/vm-manager-1.3.0.23
 	~sys-apps/fc-configuration-overlay-1.3.0.16
     ~sys-apps/fc-syslog-ng-configuration-1.3.0.11
     ~sys-kernel/foss-cloud-bin-3.17.0
-	~app-emulation/fc-broker-daemon-1.3.0.12
+	~app-emulation/fc-broker-daemon-1.3.0.13
 "
 
 S="${WORKDIR}"
