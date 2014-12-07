@@ -160,7 +160,7 @@ diff -ur a/client/scripts/linux b/client/scripts/linux
 --- a/client/scripts/linux	2008-09-01 14:41:00.000000000 +0100
 +++ b/client/scripts/linux	2008-09-01 14:58:09.000000000 +0100
 @@ -26,35 +26,41 @@
- ip=/sbin/ip
+ ip=/bin/ip
  
  make_resolv_conf() {
 +  if [ x"$PEER_DNS" != x ] && [ x$"PEER_DNS" != xyes ]; then
