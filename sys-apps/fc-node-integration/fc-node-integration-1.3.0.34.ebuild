@@ -9,7 +9,7 @@ FC_BUILD_VERSION=$(cat /etc/foss-cloud/fc-build-version)
 
 DESCRIPTION="FOSS-Cloud node integration scripts"
 HOMEPAGE="http://www.foss-cloud.org/"
-SRC_URI="https://packages.foss-cloud.org/foss-cloud/${FC_BUILD_TYP}/${FC_BUILD_VERSION}/distfiles/${PN}-${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://packages.foss-cloud.org/foss-cloud/${FC_BUILD_TYP}/${FC_BUILD_VERSION}/distfiles/${P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"
@@ -46,7 +46,7 @@ src_install() {
 	doexe bin/node-integration-*
 
 	dosbin bin/fc-*
-
+    dosbin bin/pwfcck
 	insinto /etc/openldap
 	doins -r data
 

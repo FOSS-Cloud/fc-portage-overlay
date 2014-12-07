@@ -7,11 +7,11 @@ EAPI=4
 FC_BUILD_TYP=$(cat /etc/foss-cloud/fc-build-typ)
 FC_BUILD_VERSION=$(cat /etc/foss-cloud/fc-build-version)
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Broker Daemon for FOSS-Cloud"
 HOMEPAGE="http://www.foss-cloud.org/"
-SRC_URI="https://packages.foss-cloud.org/foss-cloud/${FC_BUILD_TYP}/${FC_BUILD_VERSION}/distfiles/${PN}-${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://packages.foss-cloud.org/foss-cloud/${FC_BUILD_TYP}/${FC_BUILD_VERSION}/distfiles/${P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL-1.1"
 SLOT="0"
