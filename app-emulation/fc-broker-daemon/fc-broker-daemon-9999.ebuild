@@ -4,7 +4,7 @@
 
 EAPI=4
 
-inherit eutils git-2
+inherit user eutils git-2
 
 DESCRIPTION="Broker Daemon for FOSS-Cloud"
 HOMEPAGE="http://www.foss-cloud.org/"

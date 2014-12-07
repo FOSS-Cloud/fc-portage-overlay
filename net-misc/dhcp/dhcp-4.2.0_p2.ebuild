@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $
 
-inherit eutils flag-o-matic autotools
+inherit user eutils flag-o-matic autotools
 
 MY_PV="${PV//_alpha/a}"
 MY_PV="${MY_PV//_beta/b}"
