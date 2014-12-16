@@ -18,17 +18,17 @@ RDEPEND="cifs? ( net-fs/cifs-utils )
 	zabbix? ( net-analyzer/zabbix[agent] )
 	sys-block/nbd
 	>=net-misc/ucarp-1.5.2-r3
-	~app-misc/fc-misc-scripts-1.3.0.8
-    ~net-nds/fc-ldap-schemas-1.3.0.17
-	~net-nds/fc-ldap-utils-1.3.0.10
-	~sys-apps/fc-node-integration-1.3.0.42
+	~app-misc/fc-misc-scripts-1.3.0
+    ~net-nds/fc-ldap-schemas-1.3.0
+	~net-nds/fc-ldap-utils-1.3.0
+	~sys-apps/fc-node-integration-1.3.0
 	~sys-apps/fc-prov-backup-kvm-1.0.11
 	~x11-themes/fc-artwork-1.0.4
-	~www-apps/vm-manager-1.3.0.28
-	~sys-apps/fc-configuration-overlay-1.3.0.18
-    ~sys-apps/fc-syslog-ng-configuration-1.3.0.12
+	~www-apps/vm-manager-1.3.0
+	~sys-apps/fc-configuration-overlay-1.3.0
+    ~sys-apps/fc-syslog-ng-configuration-1.3.0
     ~sys-kernel/foss-cloud-bin-3.17.0
-	~app-emulation/fc-broker-daemon-1.3.0.8
+	~app-emulation/fc-broker-daemon-1.3.0
 "
 
 S="${WORKDIR}"
