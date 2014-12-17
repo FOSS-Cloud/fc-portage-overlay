@@ -21,7 +21,7 @@ RDEPEND="cifs? ( net-fs/cifs-utils )
 	~app-misc/fc-misc-scripts-1.3.0
     ~net-nds/fc-ldap-schemas-1.3.0
 	~net-nds/fc-ldap-utils-1.3.0
-	~sys-apps/fc-node-integration-1.3.0.1
+	~sys-apps/fc-node-integration-1.3.0.2
 	~sys-apps/fc-prov-backup-kvm-1.0.11
 	~x11-themes/fc-artwork-1.0.4
 	~www-apps/vm-manager-1.3.0
