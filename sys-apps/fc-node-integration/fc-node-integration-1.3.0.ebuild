@@ -46,7 +46,7 @@ src_install() {
 	doexe bin/node-integration-*
 
 	dosbin bin/fc-*
-    dosbin bin/pwfcck
+	
 	insinto /etc/openldap
 	doins -r data
 
