@@ -17,10 +17,11 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=net-nds/sst-ldap-utils-1.0.5"
+RDEPEND=">=net-nds/fc-ldap-utils-1.3.0"
 
 src_configure() {
     rm /var/www/localhost/htdocs/vm-manager/protected/config/modules_config.php
+	rm /var/www/localhost/htdocs/vm-manager/protected/runtime/cron/.keep
 }
 
 src_install() {
