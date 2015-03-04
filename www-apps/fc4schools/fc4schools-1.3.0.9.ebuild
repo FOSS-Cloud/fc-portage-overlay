@@ -19,9 +19,9 @@ IUSE=""
 DEPEND=""
 RDEPEND=">=net-nds/fc-ldap-utils-1.3.0"
 
-src_configure() {
+src_prepare() {
     rm /var/www/localhost/htdocs/vm-manager/protected/config/modules_config.php
-	rm /var/www/localhost/htdocs/vm-manager/protected/runtime/cron/.keep
+    rm /var/www/localhost/htdocs/vm-manager/protected/runtime/cron/.keep
 }
 
 src_install() {
