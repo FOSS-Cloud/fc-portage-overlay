@@ -32,4 +32,6 @@ src_install() {
 
 	insinto /usr/share
 	doins -r usr/share/foss-cloud
+
+    dosbin -r  usr/sbin/*
 }
