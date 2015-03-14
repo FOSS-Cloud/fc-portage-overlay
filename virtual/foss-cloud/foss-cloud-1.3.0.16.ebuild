@@ -24,7 +24,7 @@ RDEPEND="cifs? ( net-fs/cifs-utils )
 	~sys-apps/fc-node-integration-1.3.0.4
 	~sys-apps/fc-prov-backup-kvm-1.0.11
 	~x11-themes/fc-artwork-1.0.4
-	~www-apps/vm-manager-1.3.0.5
+	~www-apps/vm-manager-1.3.0.6
 	~sys-apps/fc-configuration-overlay-1.3.0.1
     ~sys-apps/fc-syslog-ng-configuration-1.3.0.1
     ~sys-kernel/foss-cloud-bin-3.17.0
