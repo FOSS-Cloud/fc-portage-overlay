@@ -21,7 +21,6 @@ RDEPEND=">=net-nds/fc-ldap-utils-1.3.0"
 
 src_prepare() {
     rm /var/www/localhost/htdocs/vm-manager/protected/config/modules_config.php
-    rm /var/www/localhost/htdocs/vm-manager/protected/runtime/cron/.keep
 }
 
 src_install() {
@@ -29,7 +28,7 @@ src_install() {
 	doins -r vm-manager/protected/
 
 	insinto /usr/sbin/
-	doins -r system/usr/sbin 
+	doins -r system/usr/sbin/*
 
 	dodoc README.md
 }
