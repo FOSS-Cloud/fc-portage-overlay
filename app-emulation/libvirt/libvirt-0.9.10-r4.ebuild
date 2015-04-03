@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 2008-2015=5 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/Attic/libvirt-0.9.10-r4.ebuild,v 1.10 2012/08/13 03:20:22 cardoe dead $
 

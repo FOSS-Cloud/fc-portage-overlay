@@ -1,4 +1,4 @@
-# Copyright 1999-2013 FOSS-Group
+# Copyright 2008-2015=5 FOSS-Group
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 

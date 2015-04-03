@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 2008-2015=5 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.3.1.ebuild,v 1.2 2012/11/19 16:10:26 ultrabug Exp $
 
