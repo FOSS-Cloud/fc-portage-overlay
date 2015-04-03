@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
-FC_BUILD_TYP=$(cat /etc/foss-cloud/fc-build-type)
+FC_BUILD_TYPE=$(cat /etc/foss-cloud/fc-build-type)
 FC_BUILD_VERSION=$(cat /etc/foss-cloud/fc-build-version)
 
 inherit eutils perl-module

@@ -6,7 +6,7 @@
 #
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 inherit git-2
 

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Kernel Samepage Merging (KSM) initscripts and ksmtuned daemon from Fedora."
 HOMEPAGE="http://fedoraproject.org/wiki/Features/KSM"

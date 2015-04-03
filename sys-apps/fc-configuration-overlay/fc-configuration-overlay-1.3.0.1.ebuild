@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
-FC_BUILD_TYP=$(cat /etc/foss-cloud/fc-build-type)
+FC_BUILD_TYPE=$(cat /etc/foss-cloud/fc-build-type)
 FC_BUILD_VERSION=$(cat /etc/foss-cloud/fc-build-version)
 
 MY_PN="fc-configuration-overlay"
@@ -12,7 +12,7 @@ MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="FOSS-Cloud configuration files"
 HOMEPAGE="http://www.foss-cloud.org/"
-SRC_URI="https://packages.foss-cloud.org/foss-cloud/${FC_BUILD_TYP}/${FC_BUILD_VERSION}/distfiles/${P}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://packages.foss-cloud.org/foss-cloud/${FC_BUILD_TYPE}/${FC_BUILD_VERSION}/distfiles/${P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="EUPL"
 SLOT="0"

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="virtual package to pull in FOSS-Cloud packages"
 HOMEPAGE="http://www.foss-cloud.org/"

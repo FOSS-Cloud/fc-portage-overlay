@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.3.1.ebuild,v 1.2 2012/11/19 16:10:26 ultrabug Exp $
 
-EAPI=4
+EAPI=5
 
 PYTHON_DEPEND="2"
 AUTOTOOLS_AUTORECONF=1
