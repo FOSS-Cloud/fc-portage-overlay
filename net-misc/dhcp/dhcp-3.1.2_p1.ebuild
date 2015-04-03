@@ -1,4 +1,4 @@
-# Copyright 2008-2015=5 Gentoo Foundation
+# Copyright 2008-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.1.1.ebuild,v 1.9 2008/11/05 00:41:46 vapier Exp $
 

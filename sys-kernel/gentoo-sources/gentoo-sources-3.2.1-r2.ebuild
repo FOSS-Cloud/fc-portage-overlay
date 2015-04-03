@@ -1,4 +1,4 @@
-# Copyright 2008-2015=5 Gentoo Foundation
+# Copyright 2008-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/Attic/gentoo-sources-3.2.1-r2.ebuild,v 1.9 2012/09/12 14:22:11 mpagano dead $
 

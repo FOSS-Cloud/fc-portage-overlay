@@ -1,4 +1,4 @@
-# Copyright 2008-2015=5 stepping stone GmbH, Switzerland
+# Copyright 2008-2015 stepping stone GmbH, Switzerland
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 

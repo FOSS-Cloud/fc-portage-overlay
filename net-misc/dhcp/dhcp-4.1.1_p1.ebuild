@@ -1,4 +1,4 @@
-# Copyright 2008-2015=5 Gentoo Foundation
+# Copyright 2008-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.1.0.ebuild,v 1.2 2010/01/15 19:00:22 ulm Exp $
 
