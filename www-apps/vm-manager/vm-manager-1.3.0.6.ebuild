@@ -31,30 +31,6 @@ src_configure() {
 	sed -i \
 		-e "s|^\$yii=.*|\$yii='/usr/share/php/yii/framework/yii.php';|" \
 		index.php || die "sed failed"
-
-	declare -A parameter
-
-	parameter[server]="'ldaps://<FOSS-CLOUD-LDAP-HOSTNAME>/'"
-	parameter[bind_rdn]="'cn=Manager,dc=foss-cloud,dc=org'"
-	parameter[bind_pwd]="'<FOSS-CLOUD-LDAP-PASSWORD>'"
-	parameter[base_dn]="'dc=foss-cloud,dc=org'"
-	parameter[isochoosabledir]="'/var/virtualization/iso-choosable/'"
-	parameter[isodir]="'/var/virtualization/iso/'"
-	parameter[dynamicdir]="'/var/virtualization/vm-dynamic/'"
-	parameter[persistentdir]="'/var/virtualization/vm-persistent/'"
-	parameter[templatesdir]="'/var/virtualization/vm-templates/'"
-	parameter[vmstoragepool]="'0f83f084-8080-413e-b558-b678e504836e'"
-	parameter[vmtemplatestoragepool]="'5b77d2f6-061f-410c-8ee7-9e61da6f1927'"
-
-	for k in ${!parameter[@]} ; do
-		sed -i \
-			-e "s|\('${k}' =>\) '.*'|\1 ${parameter[${k}]}|" \
-			vm_config.php || die "sed failed for ${k}"
-	done
-
-	sed -i \
-		-e "s|\('port' =>\) [0-9]*|\1 636|" \
-		vm_config.php || die "sed failed"
 }
 
 src_install() {
