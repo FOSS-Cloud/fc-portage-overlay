@@ -58,7 +58,7 @@ src_install() {
 	insinto /etc/libvirt/storage
 	doins libvirt/storage/*.xml
 
-	for d in layman portage profile.d ssh ssl dhcp kernels apache2 openldap foss-cloud php powerdns vhosts sysctl.d logrotate.d ; do
+	for d in layman portage profile.d ssh ssl dhcp cron.d kernels apache2 openldap foss-cloud php powerdns vhosts sysctl.d logrotate.d ; do
 		insinto "/etc/${d}"
 		doins -r "${d}"/*
 	done
