@@ -19,7 +19,7 @@ RDEPEND="cifs? ( net-fs/cifs-utils )
 	sys-block/nbd
 	>=net-misc/ucarp-1.5.2-r3
 	~app-misc/fc-misc-scripts-1.3.0.19
-    ~net-nds/fc-ldap-schemas-1.3.0.1
+    ~net-nds/fc-ldap-schemas-1.3.0.7
 	~net-nds/fc-ldap-utils-1.3.0.1
 	~sys-apps/fc-node-integration-1.3.0.5
 	~sys-apps/fc-prov-backup-kvm-1.0.11
