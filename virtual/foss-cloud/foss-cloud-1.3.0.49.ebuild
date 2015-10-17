@@ -28,7 +28,7 @@ RDEPEND="cifs? ( net-fs/cifs-utils )
 	~sys-apps/fc-configuration-overlay-1.3.0.6
     ~sys-apps/fc-syslog-ng-configuration-1.3.0.1
     ~sys-kernel/foss-cloud-bin-4.0.5
-	~app-emulation/fc-broker-daemon-1.3.0.6
+	~app-emulation/fc-broker-daemon-1.3.0.7
 "
 
 S="${WORKDIR}"
