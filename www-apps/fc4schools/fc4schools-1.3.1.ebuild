@@ -31,4 +31,7 @@ src_install() {
 	doins -r system/usr/sbin/*
 
 	dodoc README.md
+	
+	echo 'CONFIG_PROTECT="/var/www/localhost/htdocs/vm-manager/protected/config/modules_config.php"' > "${T}/99modules"
+	doenvd "${T}/99modules"
 }
