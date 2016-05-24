@@ -27,7 +27,7 @@ RDEPEND="cifs? ( net-fs/cifs-utils )
 	~www-apps/vm-manager-1.3.1.3
 	~sys-apps/fc-configuration-overlay-1.3.1.1
     ~sys-apps/fc-syslog-ng-configuration-1.3.1
-    ~sys-kernel/foss-cloud-bin-4.0.5
+    ~sys-kernel/foss-cloud-bin-4.4.9
 	~app-emulation/fc-broker-daemon-1.3.1
 "
 
