@@ -4,7 +4,7 @@ sys-apps/module-init-tools
 >=app-editors/vim-core-7.3.763
 >=app-editors/vim-7.3.763
 
->=sys-kernel/gentoo-sources-4.9.14
+>=sys-kernel/gentoo-sources-4.10.2
 
 =dev-lang/perl-5.12*
 =dev-lang/perl-5.16*

@@ -7,4 +7,5 @@
 # required by @system
 # required by @world (argument)
 =dev-lang/php-5.6.1 ~amd64
-
+# required by =app-emulation/libvirt-3.0.0 (argument)
+=app-emulation/libvirt-3.0.0 ~amd64
