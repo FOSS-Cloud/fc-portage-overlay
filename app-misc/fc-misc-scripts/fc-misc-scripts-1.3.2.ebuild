@@ -7,7 +7,7 @@ EAPI=5
 FC_BUILD_TYPE=$(cat /etc/foss-cloud/fc-build-type)
 FC_BUILD_VERSION=$(cat /etc/foss-cloud/fc-build-version)
 
-DESCRIPTION="FOSS-Cloud for schools"
+DESCRIPTION="FOSS-Cloud miscellaneous scripts"
 HOMEPAGE="http://www.foss-cloud.org/"
 SRC_URI="https://packages.foss-cloud.org/foss-cloud/${FC_BUILD_TYPE}/${FC_BUILD_VERSION}/distfiles/${P}.tar.gz -> ${P}.tar.gz"
 
@@ -17,21 +17,22 @@ KEYWORDS="amd64"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=net-nds/fc-ldap-utils-1.3.0"
+RDEPEND=""
 
-src_prepare() {
-    rm /var/www/localhost/htdocs/vm-manager/protected/config/modules_config.php
-}
 
 src_install() {
-	insinto /var/www/localhost/htdocs/vm-manager/
-	doins -r vm-manager/protected/
+	exeinto /usr/libexec/foss-cloud
+	doexe usr/libexec/foss-cloud/*.sh
 
-	insinto /usr/sbin/
-	doins -r system/usr/sbin/*
+	insinto /etc
+	doins -r etc/{foss-cloud,local.d}
 
-	dodoc README.md
-	
-	echo 'CONFIG_PROTECT="/var/www/localhost/htdocs/vm-manager/protected/config/modules_config.php"' > "${T}/99modules"
-	doenvd "${T}/99modules"
+	exeinto /etc/portage/postsync.d
+	doexe etc/portage/postsync.d/sync-overlays
+
+	insinto /usr/share
+	doins -r usr/share/foss-cloud
+
+	insinto /usr/sbin
+	dosbin  usr/sbin/*
 }

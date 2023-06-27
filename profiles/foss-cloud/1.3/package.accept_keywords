@@ -1,8 +1,6 @@
 # required by =sys-libs/glibc-2.20 (argument)
 =sys-libs/glibc-2.20 **
 
-=dev-php/libvirt-php-0.4.8-r4
-
 # required by dev-php/libvirt-php-0.4.8-r4::foss-cloud[php_targets_php5-6]
 # required by www-apps/vm-manager-1.3.0.21::foss-cloud
 # required by virtual/foss-cloud-1.3.0.33::foss-cloud
@@ -10,3 +8,12 @@
 # required by @world (argument)
 =dev-lang/php-5.6.1 ~amd64
 
+# required by =app-emulation/libvirt-3.0.0 (argument)
+=app-emulation/libvirt-3.0.0 ~amd64
+
+# required by =dev-lang/python-3.4.6 (argument)
+=dev-lang/python-3.4.6 ~amd64
+
+# required by app-emulation/qemu-2.9.0-r54::gentoo[pin-upstream-blobs,qemu_softmmu_targets_x86_64,qemu_softmmu_targets_i386]
+# required by qemu (argument)
+=sys-firmware/edk2-ovmf-2017_pre20170505 ~amd64
